@@ -1,13 +1,271 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nexus-ambiental</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nexus-ambiental</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <section
+    class="bg-[url(src/assets/green.jpg)] bg-cover bg-bottom bg-no-repeat w-full h-[900px] px-15 py-4 flex-col justify-center">
+
+    <header class="flex flex-row justify-self-end mb-20">
+      <div class="flex flex-row gap-30 text-green-950 text-center">
+        <a href="#">
+          PROBLEMA
+        </a>
+        <a href="#">
+          PESO
+        </a>
+        <a href="#">
+          AJUDAR
+        </a>
+      </div>
+    </header>
+
+    <div class="flex flex-col justify-self-center text-center mb-94">
+      <p class="text-6xl text-emerald-500 tracking-widest text-shadow-[3px_6px_5px_rgb(45_45_45/_0.8)] mb-1">
+        NEXUS
+      </p>
+      <p class="text-emerald-300 tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]">
+        ambiental
+      </p>
+    </div>
+
+    <p class="text-center leading-tight tracking-widest text-green-950 text-shadow-[0px_0px_3px_rgb(100_100_100/_0.8)]">
+      Realçando o nexo<br>mais importante.
+    </p>
+
+  </section>
+
+
+
+  <section class="">
+
+    <div class="absolute bg-linear-to-t from-[#354635] from-12% to-transparent w-full h-[280px] -translate-y-[280px]">
+    </div>
+
+    <div class="bg-[#354635] w-full h-[800px] px-28 py-36">
+
+      <div class="flex justify-between">
+
+        <div class="flex justify-center items-center overflow-hidden">
+          <img src="src/assets/placeholder.jpg" alt="image" class="rounded-2xl">
+          <!--overflow nao funciona pq o negócio tá absolute n sei arrumar-->
+          <div class="absolute translate-x-47 bg-black w-[70px] h-[50px] cursor-pointer rounded-2xl opacity-75"></div>
+          <div class="absolute -translate-x-47 bg-black w-[70px] h-[50px] cursor-pointer rounded-2xl opacity-75"></div>
+        </div>
+
+        <div class="flex-col">
+
+          <div class="mb-3">
+            <h1 class="text-[40px] text-[#8BCE95] text-right -mb-[8px] mr-2">
+              PROBLEMA
+            </h1>
+
+            <div>
+              <hr class="border-[#8BCE95] border-[1px] w-70 absolute translate-x-14">
+              <hr class="border-[#8BCE95] border-[1px] w-45 absolute rotate-90 translate-x-[247px] translate-y-10">
+              <!--div de linhas estilizadsa-->
+            </div>
+          </div>
+
+          <p class="text-justify max-w-84 text-[17px] text-[#D2FAD8] relative -translate-x-2 leading-tight">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo quos ex vitae ut placeat deserunt
+            maxime reprehenderit eos nulla iste, consequatur quod eaque voluptate debitis voluptatum non consectetur
+            excepturi architecto praesentium? Est, illo. Voluptates possimus ducimus laborum dolorem suscipit,
+            recusandae veniam quae officiis provident quo enim modi commodi inventore neque eum fugiat quia corporis
+            tempore deleniti! Commodi, laudantium sapiente?
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <hr class="border-[#FEDB4F] border-4">
+
+  <section class="w-full h-[2480px] bg-[#454533] overflow-hidden px-28">
+
+
+    <div class="flex w-1/2 justify-center gap-10 mx-auto relative -translate-y-21 mb-24">
+      <button
+        class="bg-[#67749D] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(66,75,103,1)] cursor-pointer">A</button>
+      <button
+        class="bg-[#6D9770] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(74,107,77,1)] cursor-pointer">B</button>
+      <button
+        class="bg-[#FEDB4F] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(224,147,4,1)] cursor-pointer">C</button>
+      <button
+        class="bg-[#8F6CA7] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(106,46,91,1)] cursor-pointer">D</button>
+    </div>
+
+    <div class="flex justify-center flex-col items-center mb-20">
+      <h1 class="text-5xl font-light mb-2 text-[#FEDB4F]">POLUIÇÃO: AR</h1>
+      <hr class="border-2 w-120 border-[#E09304] mb-10">
+
+      <p class="max-w-160 text-md text-white tracking-tight text-justify">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus ut, repellendus itaque enim ipsa
+        tempore illo dolore vel error atque eum voluptas. Quas enim rem consectetur. Dicta ratione accusantium fuga
+        beatae placeat omnis libero quisquam officiis quod? Ipsa perferendis, officiis voluptatibus voluptas dignissimos
+        corporis in velit rerum tempora eligendi atque, similique illum incidunt necessitatibus id nemo dolorum quia
+        pariatur numquam! Laudantium ad non incidunt recusandae, explicabo ab?
+      </p>
+    </div>
+
+    <div class="flex justify-center mb-42">
+      <img src="src/assets/placeholder2.jpg" alt="placeholder" class="rounded-2xl">
+
+      <div class="absolute">
+        <hr class="border-2 w-[46px] absolute border-[#E09304] -translate-x-[360px] -translate-y-[15px]">
+        <hr class="border-2 w-[46px] absolute border-[#E09304] -translate-x-[383px] translate-y-[6px] rotate-270">
+      </div>
+
+      <div class="absolute rotate-180 translate-y-[445px]">
+        <hr class="border-2 w-[46px] absolute border-[#E09304] -translate-x-[360px] -translate-y-[15px]">
+        <hr class="border-2 w-[46px] absolute border-[#E09304] -translate-x-[383px] translate-y-[6px] rotate-270">
+      </div>
+
+    </div>
+
+    <div class="flex justify-between mb-42">
+
+      <div class="flex justify-center items-center overflow-hidden">
+        <img src="src/assets/placeholder3.jpg" alt="image" class="rounded-2xl">
+      </div>
+
+      <div class="flex-col static -translate-y-10">
+
+        <div class="mb-3 relative">
+          <h1 class="text-[40px] text-[#FEDB4F] text-right -mb-[8px] mr-2">
+            CONSEQUÊNCIA
+          </h1>
+
+          <div>
+            <hr class="border-[#E09304] border-[1px] w-70 absolute translate-x-14">
+            <hr class="border-[#E09304] border-[1px] w-45 absolute rotate-90 translate-x-[247px] translate-y-10">
+          </div>
+        </div>
+
+        <p class="text-justify max-w-84 text-[17px] text-[#D2FAD8] relative -translate-x-2 leading-tight">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo quos ex vitae ut placeat deserunt
+          maxime reprehenderit eos nulla iste, consequatur quod eaque voluptate debitis voluptatum non consectetur
+          excepturi architecto praesentium? Est, illo. Voluptates possimus ducimus laborum dolorem suscipit, recusandae
+          veniam quae officiis provident quo enim modi commodi inventore neque eum fugiat quia corporis tempore
+          deleniti! Commodi, laudantium sapiente?
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="flex justify-center flex-col items-center mb-20">
+      <h1 class="text-3xl font-light mb-1 text-[#FEDB4F]">como</h1>
+      <hr class="border-2 w-120 border-[#E09304]">
+      <h1 class="text-5xl font-light text-[#FEDB4F]">AJUDAR</h1>
+    </div>
+
+    <div
+      class="w-full h-[500px] border-t-3 border-b-3 border-[#E09304] absolute left-1/2 -translate-x-1/2 overflow-hidden mb-10">
+      <div class="absolute w-full h-full bg-linear-to-r from-black from-10% via-transparent to-black to-90% opacity-60">
+      </div>
+      <div class="absolute w-full h-full bg-black opacity-15"></div>
+      <div class="flex gap-0 justify-center">
+
+        <div
+          class="absolute translate-x-[450px] translate-y-[200px] bg-black w-[60px] h-[65px] cursor-pointer rounded-[13px] opacity-55">
+        </div>
+        <div
+          class="absolute -translate-x-[450px] translate-y-[200px] bg-black w-[60px] h-[65px] cursor-pointer rounded-[13px] opacity-55">
+        </div>
+
+        <div class="absolute flex flex-col justify-center items-center text-center">
+          <div class="mt-8 text-white mb-45">
+            <div class="text-lg">
+              Transporte
+            </div>
+            <div class="font-bold text-3xl -mt-2 tracking-wide">
+              SUSTENTÁVEL
+            </div>
+          </div>
+
+          <div class="max-w-[600px] text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia modi inventore tempora voluptatem
+            molestias, ut architecto alias excepturi nostrum officiis quibusdam nihil fuga aspernatur illum facilis!
+            Minus eius eaque atque a harum dolorum eum architecto, eligendi nostrum beatae consectetur libero repellat?
+            Quo, minus ducimus!
+          </div>
+
+        </div>
+
+        <img src="src/assets/sliderplaceholder2.jpg">
+        <img src="src/assets/sliderplaceholder1.jpg">
+        <img src="src/assets/sliderplaceholder3.jpg">
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="w-full h-[650px] bg-[#454533] -z-1 relative">
+
+    <div>
+      <div class="absolute w-full h-[650px] bg-radial from-[#E09304] to-transparent to-60% opacity-35 z-1"></div>
+      <hr class="mx-auto border-2 border-[#E09304] w-[800px] mb-40">
+
+      <div class="flex flex-row justify-around relative z-2">
+        <div class="flex-col">
+          <div class="max-w-[305px] text-white font-light tracking-wide text-[23px] mb-16 leading-tight">
+            Registre-se e receba e-mails com atualizações de nosso site.
+          </div>
+
+          <div>
+            <div class="text-3xl font-light mb-1 ml-3 text-[#FEDB4F]">
+              Endereço de e-mail
+            </div>
+
+            <hr class="border-1 border-[#E09304] w-[400px]">
+          </div>
+        </div>
+
+        <div>
+          <div class="text-white font-light tracking-wide text-[25px] mb-16 leading-tight">
+            <div class="text-right">
+              Nos siga em:
+            </div>
+
+            <hr class="border-1 border-[#E09304] w-[185px] absolute rotate-90 translate-x-[90px] translate-y-16">
+          </div>
+
+          <div class="flex mt-26 justify-between relative -translate-x-16">
+            <a href="">a</a>
+            <a href="">x</a>
+            <a href="">i</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 z-2 w-full text-center text-[#8F8F68]">
+      2025 © NEXUS AMBIENTAL. Todos direitos reservados.
+    </div>
+
+  </footer>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
