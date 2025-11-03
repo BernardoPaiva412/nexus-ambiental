@@ -18,10 +18,10 @@
   <div id="root"></div>
 
   <section
-    class="bg-[url(src/assets/green.jpg)] bg-cover bg-bottom bg-no-repeat w-full h-[900px] px-15 py-4 flex-col justify-center">
+    class="bg-[url(src/assets/green.jpg)] bg-cover bg-bottom bg-no-repeat w-full h-[900px] pb-4 flex-col justify-center">
 
-    <header class="flex flex-row justify-self-end mb-20">
-      <div class="flex flex-row gap-30 text-green-950 text-center">
+    <header class="flex mb-20 w-full h-auto backdrop-blur-[3px] px-18 py-3">
+      <div class="flex flex-row ml-auto gap-30 text-green-950 text-center items-center">
         <a href="#">
           PROBLEMA
         </a>
@@ -34,7 +34,7 @@
       </div>
     </header>
 
-    <div class="flex flex-col justify-self-center text-center mb-94">
+    <div class="flex flex-col justify-self-center text-center mb-94 mx-15">
       <p class="text-6xl text-emerald-500 tracking-widest text-shadow-[3px_6px_5px_rgb(45_45_45/_0.8)] mb-1">
         NEXUS
       </p>
@@ -43,7 +43,8 @@
       </p>
     </div>
 
-    <p class="text-center leading-tight tracking-widest text-green-950 text-shadow-[0px_0px_3px_rgb(100_100_100/_0.8)]">
+    <p
+      class="text-center leading-tight tracking-widest text-green-950 text-shadow-[0px_0px_3px_rgb(100_100_100/_0.8)] mx-15">
       Realçando o nexo<br>mais importante.
     </p>
 
@@ -53,41 +54,51 @@
 
   <section class="">
 
-    <div class="absolute bg-linear-to-t from-[#354635] from-12% to-transparent w-full h-[280px] -translate-y-[280px]">
+    <div class="absolute bg-linear-to-t from-[#354635] from-12% to-transparent w-full h-[250px] -translate-y-[250px]">
     </div>
 
-    <div class="bg-[#354635] w-full h-[800px] px-28 py-36">
+    <div class="bg-[#354635] w-full h-[800px] px-8 py-36">
 
-      <div class="flex justify-between">
+      <div class="flex justify-around">
 
-        <div class="flex justify-center items-center overflow-hidden">
-          <img src="src/assets/placeholder.jpg" alt="image" class="rounded-2xl">
+        <div class="flex justify-center items-center">
+          <img src="src/assets/placeholder.jpg" alt="image" class="rounded-[35px]">
           <!--overflow nao funciona pq o negócio tá absolute n sei arrumar-->
-          <div class="absolute translate-x-47 bg-black w-[70px] h-[50px] cursor-pointer rounded-2xl opacity-75"></div>
-          <div class="absolute -translate-x-47 bg-black w-[70px] h-[50px] cursor-pointer rounded-2xl opacity-75"></div>
-        </div>
-
-        <div class="flex-col">
-
-          <div class="mb-3">
-            <h1 class="text-[40px] text-[#8BCE95] text-right -mb-[8px] mr-2">
-              PROBLEMA
-            </h1>
-
-            <div>
-              <hr class="border-[#8BCE95] border-[1px] w-70 absolute translate-x-14">
-              <hr class="border-[#8BCE95] border-[1px] w-45 absolute rotate-90 translate-x-[247px] translate-y-10">
-              <!--div de linhas estilizadsa-->
+          <div class="absolute flex justify-between items-center w-[400px] overflow-hidden">
+            <div class="bg-black cursor-pointer h-[65px] w-[120px] -translate-x-[40px] rounded-[18px] opacity-65 flex justify-end px-2">
+              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"></path> </g></svg>
+            </div>
+            <div class="bg-black cursor-pointer h-[65px] w-[120px] translate-x-[40px] rounded-[18px] opacity-65 flex justify-start px-2">
+              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"></path> </g></svg>
             </div>
           </div>
+        </div>
 
-          <p class="text-justify max-w-84 text-[17px] text-[#D2FAD8] relative -translate-x-2 leading-tight">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo quos ex vitae ut placeat deserunt
-            maxime reprehenderit eos nulla iste, consequatur quod eaque voluptate debitis voluptatum non consectetur
-            excepturi architecto praesentium? Est, illo. Voluptates possimus ducimus laborum dolorem suscipit,
-            recusandae veniam quae officiis provident quo enim modi commodi inventore neque eum fugiat quia corporis
-            tempore deleniti! Commodi, laudantium sapiente?
-          </p>
+        <div>
+          <div class="flex-col">
+
+            <div class="mb-3">
+              <h1 class="text-[42px] text-[#8BCE95] text-right -mb-[8px] mr-2">
+                PROBLEMA
+              </h1>
+            </div>
+
+            <p class="text-justify max-w-100 text-[20px] text-[#D2FAD8] relative -translate-x-2 leading-tight">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo quos ex vitae ut placeat
+              deserunt
+              maxime reprehenderit eos nulla iste, consequatur quod eaque voluptate debitis voluptatum non consectetur
+              excepturi architecto praesentium? Est, illo. Voluptates possimus ducimus laborum dolorem suscipit,
+              recusandae veniam quae officiis provident quo enim modi commodi inventore neque eum fugiat quia corporis
+              tempore deleniti! Commodi, laudantium sapiente?
+            </p>
+
+          </div>
+
+          <div class="relative -right-16 -top-[313px]">
+            <hr class="border-[#8BCE95] border-[1px] w-70 static translate-x-14">
+            <hr class="border-[#8BCE95] border-[1px] w-45 static rotate-90 translate-x-[247px] translate-y-10">
+            <!--div de linhas estilizadsa-->
+          </div>
 
         </div>
 
@@ -185,12 +196,6 @@
       <div class="absolute w-full h-full bg-black opacity-15"></div>
       <div class="flex gap-0 justify-center">
 
-        <div
-          class="absolute translate-x-[450px] translate-y-[200px] bg-black w-[60px] h-[65px] cursor-pointer rounded-[13px] opacity-55">
-        </div>
-        <div
-          class="absolute -translate-x-[450px] translate-y-[200px] bg-black w-[60px] h-[65px] cursor-pointer rounded-[13px] opacity-55">
-        </div>
 
         <div class="absolute flex flex-col justify-center items-center text-center">
           <div class="mt-8 text-white mb-45">
