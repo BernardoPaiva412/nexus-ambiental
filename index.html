@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nexus-ambiental</title>
+  <title>Nexus Ambiental</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
     @theme {
@@ -22,10 +22,10 @@
 
     <header class="flex mb-20 w-full h-auto backdrop-blur-[3px] px-18 py-3">
       <div class="flex flex-row ml-auto gap-30 text-green-950 text-center items-center">
-        <a href="#">
+        <a href="#problema">
           PROBLEMA
         </a>
-        <a href="#">
+        <a href="#peso">
           PESO
         </a>
         <a href="#">
@@ -38,13 +38,12 @@
       <p class="text-6xl text-emerald-500 tracking-widest text-shadow-[3px_6px_5px_rgb(45_45_45/_0.8)] mb-1">
         NEXUS
       </p>
-      <p class="text-emerald-300 tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]">
+      <p class="text-3xl text-[#cdf187] tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]">
         ambiental
       </p>
     </div>
 
-    <p
-      class="text-center leading-tight tracking-widest text-green-950 text-shadow-[0px_0px_3px_rgb(100_100_100/_0.8)] mx-15">
+    <p class=" text-center text-3xl text-[#cdf187] tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]">
       Realçando o nexo<br>mais importante.
     </p>
 
@@ -52,7 +51,7 @@
 
 
 
-  <section class="">
+  <section id="problema" class="">
 
     <div class="absolute bg-linear-to-t from-[#354635] from-12% to-transparent w-full h-[250px] -translate-y-[250px]">
     </div>
@@ -65,11 +64,31 @@
           <img src="src/assets/placeholder.jpg" alt="image" class="rounded-[35px]">
           <!--overflow nao funciona pq o negócio tá absolute n sei arrumar-->
           <div class="absolute flex justify-between items-center w-[400px] overflow-hidden">
-            <div class="bg-black cursor-pointer h-[65px] w-[120px] -translate-x-[40px] rounded-[18px] opacity-65 flex justify-end px-2">
-              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"></path> </g></svg>
+            <div
+              class="bg-black cursor-pointer h-[65px] w-[120px] -translate-x-[40px] rounded-[18px] opacity-65 flex justify-end px-2">
+              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                transform="matrix(-1, 0, 0, 1, 0, 0)">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                    fill="#FFFFFF"></path>
+                </g>
+              </svg>
             </div>
-            <div class="bg-black cursor-pointer h-[65px] w-[120px] translate-x-[40px] rounded-[18px] opacity-65 flex justify-start px-2">
-              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"></path> </g></svg>
+            <div
+              class="bg-black cursor-pointer h-[65px] w-[120px] translate-x-[40px] rounded-[18px] opacity-65 flex justify-start px-2">
+              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                transform="matrix(1, 0, 0, 1, 0, 0)">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                    fill="#FFFFFF"></path>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
@@ -110,7 +129,7 @@
 
   <hr class="border-[#FEDB4F] border-4">
 
-  <section class="w-full h-[2480px] bg-[#454533] overflow-hidden px-28">
+  <section id="peso" class="w-full h-[2480px] bg-[#454533] overflow-hidden px-28">
 
 
     <div class="flex w-1/2 justify-center gap-10 mx-auto relative -translate-y-21 mb-24">
