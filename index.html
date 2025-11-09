@@ -127,25 +127,25 @@
 
   </section>
 
-  <hr class="border-[#FEDB4F] border-4">
+  <hr class="border-[#FEDB4F] border-4" id="elementsDivider">
 
   <section id="peso" class="w-full h-[2480px] bg-[#454533] overflow-hidden px-28">
 
 
-    <div class="flex w-1/2 justify-center gap-10 mx-auto relative -translate-y-21 mb-24">
+    <div class="flex w-1/2 justify-center gap-10 mx-auto relative -translate-y-23 mb-24">
       <button
-        class="bg-[#67749D] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(66,75,103,1)] cursor-pointer">A</button>
+        class="bg-[#67749D] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(66,75,103,1)] cursor-pointer mb-4 active:mt-2 active:mb-2" id="btnOcean"></button>
       <button
-        class="bg-[#6D9770] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(74,107,77,1)] cursor-pointer">B</button>
+        class="bg-[#6D9770] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(74,107,77,1)] cursor-pointer mb-4 active:mt-2 active:mb-2" id="btnLand"></button>
       <button
-        class="bg-[#FEDB4F] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(224,147,4,1)] cursor-pointer">C</button>
+        class="bg-[#FEDB4F] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(224,147,4,1)] cursor-pointer mb-4 active:mt-2 active:mb-2" id="btnAir"></button>
       <button
-        class="bg-[#8F6CA7] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(106,46,91,1)] cursor-pointer">D</button>
+        class="bg-[#8F6CA7] w-[55px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(106,46,91,1)] cursor-pointer mb-4 active:mt-2 active:mb-2" id="btnNull"></button>
     </div>
 
     <div class="flex justify-center flex-col items-center mb-20">
-      <h1 class="text-5xl font-light mb-2 text-[#FEDB4F]">POLUIÇÃO: AR</h1>
-      <hr class="border-2 w-120 border-[#E09304] mb-10">
+      <h1 class="text-5xl font-light mb-2 text-[#FEDB4F] text-shadow-[0px_0px_12px]/50 text-shadow-white" id="pollution">POLUIÇÃO: AR</h1>
+      <hr class="border-2 w-120 border-[#E09304] mb-10" id="pollutionLine">
 
       <p class="max-w-160 text-md text-white tracking-tight text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus ut, repellendus itaque enim ipsa
@@ -290,6 +290,7 @@
   </footer>
 
   <script type="module" src="/src/main.jsx"></script>
+  <script src="src/script.js"></script>
 </body>
 
 </html>
