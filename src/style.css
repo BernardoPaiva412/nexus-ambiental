@@ -1,0 +1,70 @@
+@keyframes img1Trans {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+
+    }
+
+    67% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes img2Trans {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+
+    }
+
+    67% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 0;
+
+    }
+}
+
+@keyframes img3Trans {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 0;
+
+    }
+
+    67% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.img1 {
+    animation: img1Trans 30s infinite alternate;
+}
+.img2 {
+    animation: img2Trans 30s infinite alternate;
+}
+.img3 {
+    animation: img3Trans 30s infinite alternate;
+}

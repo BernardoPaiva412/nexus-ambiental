@@ -12,13 +12,18 @@
         --color-clifford: #da373d;
       }
     </style>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 
 <body>
   <div id="root"></div>
 
   <section
-    class="bg-[url(src/assets/green.jpg)] bg-cover bg-bottom bg-no-repeat w-full h-[1100px] pb-4 flex-col justify-center">
+    class="w-full h-[1100px] pb-4 flex-col justify-center relative">
+
+    <img src="src/assets/green.jpg" class="absolute -z-50 h-full img1">
+    <img src="src/assets/ocean.jpg" class="absolute -z-50 h-full img2">
+    <img src="src/assets/sky.jpg" class="absolute -z-50 h-full img3">
 
     <header class="flex mb-20 w-full h-auto backdrop-blur-[3px] px-18 py-3">
       <div class="flex flex-row ml-auto gap-30 text-green-950 text-center items-center">
