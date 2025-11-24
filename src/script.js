@@ -7,10 +7,8 @@ const windIcon = document.querySelector("#windIcon")
 const divider = document.querySelector(".elementsDivider")
 const sectionPeso = document.querySelector("#peso")
 const pollution = document.querySelector("#pollution")
-const titleLine = document.querySelector("#titleLine")
-const textRegex = /[t][e][x][t][\-][\[][\#].{6}[\]]/g
-const bgRegex = /[b][g][\-][\[][\#].{6}[\]]/g
-const borderRegex = /[b][o][r][d][e][r][\-][\[][\#].{6}[\]]/g
+const colorLines = document.querySelectorAll(".colorLine")
+const colorTexts = document.querySelectorAll(".colorText")
 
 btnOcean.addEventListener('click', () => {
     //water shadow hex #0700e0
@@ -27,10 +25,25 @@ btnOcean.addEventListener('click', () => {
     btnAir.classList.replace("shadow-[0px_8px_rgba(224_147_4)]", "shadow-[0px_8px_rgba(206_162_79)]")
     windIcon.setAttribute("fill", "#cea24f")
     divider.classList = "border-4 border-[#141CFF]"
-    sectionPeso.className.replace(bgRegex, "bg-[#333345]")
     pollution.textContent = "POLUIÇÃO: ÁGUA"
-    pollution.className.replace(textRegex, "text-[#141CFF]")
-    titleLine.className.replace(borderRegex, "border-[#0700e0]")
+    if (sectionPeso.classList.contains("bg-[#2D4A35]") === true) {
+        sectionPeso.classList.replace("bg-[#2D4A35]", "bg-[#333345]")
+        colorLines.forEach(line => {
+            line.classList.replace("border-[#14ca66]", "border-[#0700e0]")
+        })
+        colorTexts.forEach(text => {
+            text.classList.replace("border-[#asdasd]", "border-[#141CFF]")
+        })
+    }
+    if (sectionPeso.classList.contains("bg-[#454533]") === true) {
+        sectionPeso.classList.replace("bg-[#454533]", "bg-[#333345]")
+        colorLines.forEach(line => {
+            line.classList.replace("border-[#E0AE04]", "border-[#0700e0]")
+        })
+        colorTexts.forEach(text => {
+            text.classList.replace("border-[#00F968]", "border-[#141CFF]")
+        })
+    }
 })
 
 btnLand.addEventListener('click', () => {
@@ -47,8 +60,25 @@ btnLand.addEventListener('click', () => {
     btnAir.classList.replace("shadow-[0px_8px_rgba(224_147_4)]", "shadow-[0px_8px_rgba(206_162_79)]")
     windIcon.setAttribute("fill", "#cea24f")
     divider.classList = "border-4 border-[#00F968]"
-    sectionPeso.classList.replace(bgRegex, "bg-[#00F968]")
     pollution.textContent = "POLUIÇÃO: TERRA"
+    if (sectionPeso.classList.contains("bg-[#333345]") === true) {
+        sectionPeso.classList.replace("bg-[#333345]", "bg-[#2D4A35]")
+        colorLines.forEach(line => {
+            line.classList.replace("border-[#0700e0]", "border-[#14ca66]")
+        })
+        colorTexts.forEach(text => {
+            text.classList.replace("border-[#00F968]", "border-[#asdasd]")
+        })
+    }
+    if (sectionPeso.classList.contains("bg-[#454533]") === true) {
+        sectionPeso.classList.replace("bg-[#454533]", "bg-[#2D4A35]")
+        colorLines.forEach(line => {
+            line.classList.replace("border-[#E0AE04]", "border-[#14ca66]")
+        })
+        colorTexts.forEach(text => {
+            text.classList.replace("border-[#141CFF]", "border-[#asdasd]")
+        })
+    }
 })
 
 btnAir.addEventListener('click', () => {
@@ -66,8 +96,23 @@ btnAir.addEventListener('click', () => {
     btnOcean.classList.replace("shadow-[0px_8px_rgba(6_0_184)]", "shadow-[0px_8px_rgba(66,75,103,1)]")
     waveIcon.setAttribute("stroke", "#424b67")
     divider.classList = "border-4 border-[#FEDB4F]"
-    sectionPeso.className.replace(bgRegex, "bg-[#454533]")
     pollution.textContent = "POLUIÇÃO: AR"
-    pollution.className.replace(textRegex, "text-[#FEDB4F]")
-    titleLine.className.replace(borderRegex, "border-[#E09304]")
+    if (sectionPeso.classList.contains("bg-[#333345]") === true) {
+        sectionPeso.classList.replace("bg-[#333345]", "bg-[#454533]")
+        colorLines.forEach(line => {
+            line.classList.replace("border-[#0700e0]", "border-[#E0AE04]")
+        });
+        colorTexts.forEach(text => {
+            text.classList.replace("border-[#asdasd]", "border-[#00F968]")
+        })
+    }
+    if (sectionPeso.classList.contains("bg-[#2D4A35]") === true) {
+        sectionPeso.classList.replace("bg-[#2D4A35]", "bg-[#454533]")
+        colorLines.forEach(line => {
+            line.classList.replace("border-[#14ca66]", "border-[#E0AE04]")
+        });
+        colorTexts.forEach(text => {
+            text.classList.replace("border-[#141CFF]", "border-[#00F968]")
+        })
+    }
 })
