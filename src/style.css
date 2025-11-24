@@ -3,18 +3,18 @@
         opacity: 1;
     }
 
-    33% {
+    33.333% {
         opacity: 0;
 
     }
 
-    67% {
+    66.666% {
         opacity: 0;
 
     }
 
     100% {
-        opacity: 0.5;
+        opacity: 1;
     }
 }
 
@@ -23,12 +23,12 @@
         opacity: 0;
     }
 
-    33% {
+    33.333% {
         opacity: 1;
 
     }
 
-    67% {
+    66.666% {
         opacity: 0;
 
     }
@@ -44,12 +44,12 @@
         opacity: 0;
     }
 
-    33% {
+    33.333% {
         opacity: 0;
 
     }
 
-    67% {
+    66.666% {
         opacity: 1;
 
     }
@@ -59,12 +59,96 @@
     }
 }
 
+@keyframes transition-gradient-animation {
+    0% {
+        background-image: linear-gradient(to top, #354635, rgba(53, 70, 53, 0));
+    }
+
+    33.333% {
+        background-image: linear-gradient(to top, #333345, rgba(51, 51, 69, 0));
+    }
+
+    66.666% {
+        background-image: linear-gradient(to top, #454533, rgba(69, 69, 51, 0));
+    }
+    
+    100% {
+        background-image: linear-gradient(to top, #354635, rgba(53, 70, 53, 0));
+    }
+}
+
+@keyframes background-color-animation {
+    0% {
+        background-color: #354635;
+    }
+    
+    33.333% {
+        background-color: #333345;
+    }
+
+    66.666% {
+        background-color: #454533;
+    }
+
+    100% {
+        background-color: #354635;
+    }
+}
+
+@keyframes nexus-animation {
+    0% {
+        color: #14ca66;
+    }
+    
+    33.333% {
+        color: #14a1ff;
+    }
+
+    66.666% {
+        color: #E0AE04;
+    }
+
+    100% {
+        color: #14ca66;
+    }
+}
+
+@keyframes header-text-animation {
+    0% {
+        color: #354635;
+    }
+    
+    33.333% {
+        color: #333345;
+    }
+
+    66.666% {
+        color: #454533;
+    }
+
+    100% {
+        color: #354635;
+    }
+}
+
+.nexus {
+    animation: nexus-animation 10s infinite normal ease-in-out;
+}
+
+.origin-background {
+    animation: background-color-animation 10s infinite normal ease-in-out;
+}
+
+.fade-transition {
+    animation: transition-gradient-animation 10s infinite normal ease-in-out;
+}
+
 .img1 {
-    animation: img1Trans 30s infinite alternate;
+    animation: img1Trans 10s infinite normal ease-in-out;
 }
 .img2 {
-    animation: img2Trans 30s infinite alternate;
+    animation: img2Trans 10s infinite normal ease-in-out;
 }
 .img3 {
-    animation: img3Trans 30s infinite alternate;
+    animation: img3Trans 10s infinite normal ease-in-out;
 }
