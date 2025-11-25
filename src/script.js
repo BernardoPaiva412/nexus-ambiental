@@ -1,3 +1,5 @@
+// src/script.js
+
 const btnOcean = document.querySelector("#btnOcean")
 const waveIcon = document.querySelector("#waveIcon")
 const btnLand = document.querySelector("#btnLand")
@@ -9,6 +11,11 @@ const sectionPeso = document.querySelector("#peso")
 const pollution = document.querySelector("#pollution")
 const colorLines = document.querySelectorAll(".colorLine")
 const colorTexts = document.querySelectorAll(".colorText")
+
+// Definição das classes das imagens para facilitar a troca
+const bgWaterClass = "bg-[url('src/assets/ocean.jpg')]"
+const bgLandClass = "bg-[url('src/assets/green.jpg')]"
+const bgAirClass = "bg-[url('src/assets/sky.jpg')]"
 
 btnOcean.addEventListener('click', () => {
     //water shadow hex #0700e0
@@ -25,11 +32,14 @@ btnOcean.addEventListener('click', () => {
     btnAir.classList.replace("shadow-[0px_8px_rgba(224_147_4)]", "shadow-[0px_8px_rgba(206_162_79)]")
     windIcon.setAttribute("fill", "#cea24f")
     pollution.textContent = "POLUIÇÃO: ÁGUA"
+    
     //texto azul: #141cff
     //acentos azuis: #0700e0
-    if (sectionPeso.classList.contains("bg-[#2D4A35]") === true) {
-        //if green
-        sectionPeso.classList.replace("bg-[#2D4A35]", "bg-[#333345]")
+
+    // VERIFICA SE ESTAVA NA TERRA (GREEN)
+    if (sectionPeso.classList.contains(bgLandClass) === true) {
+        sectionPeso.classList.replace(bgLandClass, bgWaterClass) // Troca imagem
+        
         colorLines.forEach(line => {
             line.classList.replace("border-[#14ca66]", "border-[#0700e0]")
         })
@@ -40,9 +50,11 @@ btnOcean.addEventListener('click', () => {
             divider.classList.replace("border-[#00F968]", "border-[#141CFF]")
         })
     }
-    if (sectionPeso.classList.contains("bg-[#454533]") === true) {
-        //if yellow
-        sectionPeso.classList.replace("bg-[#454533]", "bg-[#333345]")
+    
+    // VERIFICA SE ESTAVA NO AR (SKY)
+    if (sectionPeso.classList.contains(bgAirClass) === true) {
+        sectionPeso.classList.replace(bgAirClass, bgWaterClass) // Troca imagem
+
         colorLines.forEach(line => {
             line.classList.replace("border-[#E0AE04]", "border-[#0700e0]")
         })
@@ -69,11 +81,15 @@ btnLand.addEventListener('click', () => {
     btnAir.classList.replace("shadow-[0px_8px_rgba(224_147_4)]", "shadow-[0px_8px_rgba(206_162_79)]")
     windIcon.setAttribute("fill", "#cea24f")
     pollution.textContent = "POLUIÇÃO: TERRA"
+    
     //texto verde: #00f968
     //acentos verdes: #14ca66
-    if (sectionPeso.classList.contains("bg-[#333345]") === true) {
-        //if blue
-        sectionPeso.classList.replace("bg-[#333345]", "bg-[#2D4A35]")
+
+    // VERIFICA SE ESTAVA NA ÁGUA (OCEAN)
+    if (sectionPeso.classList.contains(bgWaterClass) === true || (!sectionPeso.classList.contains(bgLandClass) && !sectionPeso.classList.contains(bgAirClass))) {
+        // O "ou" extra garante que funcione caso seja o carregamento inicial onde a classe exata pode não estar mapeada no JS ainda
+        sectionPeso.classList.replace(bgWaterClass, bgLandClass) // Troca imagem
+        
         colorLines.forEach(line => {
             line.classList.replace("border-[#0700e0]", "border-[#14ca66]")
         })
@@ -84,9 +100,11 @@ btnLand.addEventListener('click', () => {
             divider.classList.replace("border-[#141CFF]", "border-[#00F968]")
         })
     }
-    if (sectionPeso.classList.contains("bg-[#454533]") === true) {
-        //if yellow
-        sectionPeso.classList.replace("bg-[#454533]", "bg-[#2D4A35]")
+    
+    // VERIFICA SE ESTAVA NO AR (SKY)
+    if (sectionPeso.classList.contains(bgAirClass) === true) {
+        sectionPeso.classList.replace(bgAirClass, bgLandClass) // Troca imagem
+
         colorLines.forEach(line => {
             line.classList.replace("border-[#E0AE04]", "border-[#14ca66]")
         })
@@ -113,11 +131,14 @@ btnAir.addEventListener('click', () => {
     btnOcean.classList.replace("shadow-[0px_8px_rgba(6_0_184)]", "shadow-[0px_8px_rgba(66,75,103,1)]")
     waveIcon.setAttribute("stroke", "#424b67")
     pollution.textContent = "POLUIÇÃO: AR"
+    
     //texto amarelo: #fedb4f
     //acentos amarelos: #E09304
-    if (sectionPeso.classList.contains("bg-[#333345]") === true) {
-        //if blue
-        sectionPeso.classList.replace("bg-[#333345]", "bg-[#454533]")
+
+    // VERIFICA SE ESTAVA NA ÁGUA (OCEAN)
+    if (sectionPeso.classList.contains(bgWaterClass) === true || (!sectionPeso.classList.contains(bgLandClass) && !sectionPeso.classList.contains(bgAirClass))) {
+        sectionPeso.classList.replace(bgWaterClass, bgAirClass) // Troca imagem
+        
         colorLines.forEach(line => {
             line.classList.replace("border-[#0700e0]", "border-[#E0AE04]")
         });
@@ -128,9 +149,11 @@ btnAir.addEventListener('click', () => {
             divider.classList.replace("border-[#141CFF]", "border-[#fedb4f]")
         })
     }
-    if (sectionPeso.classList.contains("bg-[#2D4A35]") === true) {
-        //if green
-        sectionPeso.classList.replace("bg-[#2D4A35]", "bg-[#454533]")
+
+    // VERIFICA SE ESTAVA NA TERRA (GREEN)
+    if (sectionPeso.classList.contains(bgLandClass) === true) {
+        sectionPeso.classList.replace(bgLandClass, bgAirClass) // Troca imagem
+
         colorLines.forEach(line => {
             line.classList.replace("border-[#14ca66]", "border-[#E0AE04]")
         });
@@ -142,3 +165,25 @@ btnAir.addEventListener('click', () => {
         })
     }
 })
+
+// Lógica do Parallax Suave (Adicione ao final do arquivo)
+window.addEventListener("scroll", function () {
+    // Velocidade do fundo em relação ao scroll.
+    // 0.0 = fundo fixo (igual bg-fixed)
+    // 0.5 = move metade da velocidade (efeito de profundidade)
+    // 1.0 = move junto com a página (normal)
+    const speed = 0.5; 
+    
+    // Pega a posição atual do scroll
+    const scrollPosition = window.scrollY;
+    
+    // Calcula o deslocamento baseando-se em quando a seção começa
+    // Isso evita que a imagem comece "cortada"
+    const sectionOffset = sectionPeso.offsetTop;
+    
+    // O cálculo mágico: move o background positivamente (para baixo) enquanto a tela sobe
+    const yPos = (scrollPosition - sectionOffset) * speed;
+    
+    // Aplica a posição no CSS inline (mantendo o centro horizontal)
+    sectionPeso.style.backgroundPosition = `center ${yPos}px`;
+});
