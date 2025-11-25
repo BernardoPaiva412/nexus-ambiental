@@ -1,300 +1,458 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexus Ambiental</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Ambiental</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
         --color-clifford: #da373d;
       }
     </style>
-    <link rel="stylesheet" href="src/style.css">
-</head>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
 
-<body>
-  <div id="root"></div>
+  <body>
+    <div id="root"></div>
 
-  <section
-    class="w-full h-[1100px] pb-4 flex-col justify-center relative">
+    <section class="w-full h-[1100px] pb-4 flex-col justify-center relative">
+      <img src="src/assets/green.jpg" class="absolute -z-50 h-full img1" />
+      <img src="src/assets/ocean.jpg" class="absolute -z-50 h-full img2" />
+      <img src="src/assets/sky.jpg" class="absolute -z-50 h-full img3" />
 
-    <img src="src/assets/green.jpg" class="absolute -z-50 h-full img1">
-    <img src="src/assets/ocean.jpg" class="absolute -z-50 h-full img2">
-    <img src="src/assets/sky.jpg" class="absolute -z-50 h-full img3">
-
-    <header class="flex mb-20 w-full h-auto backdrop-blur-[3px] px-18 py-3">
-      <div class="flex flex-row ml-auto gap-30 text-center items-center header-text">
-        <a href="#origem">
-          ORIGEM
-        </a>
-        <a href="#peso">
-          PESO
-        </a>
-        <a href="#">
-          AJUDAR
-        </a>
-      </div>
-    </header>
-
-    <div class="flex flex-col justify-self-center text-center mb-94 mx-15">
-      <p class="text-6xl tracking-widest text-shadow-[3px_6px_5px_rgb(45_45_45/_0.8)] mb-1 nexus">
-        NEXUS
-      </p>
-      <p class="text-3xl text-[#cdf187] tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]">
-        ambiental
-      </p>
-    </div>
-
-    <p class=" text-center text-3xl text-[#cdf187] tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]">
-      Realçando o nexo<br>mais importante.
-    </p>
-
-  </section>
-
-
-
-  <section id="origem" class="">
-
-    <div class="absolute  w-full h-[250px] -translate-y-[250px] fade-transition">
-    </div>
-
-    <div class="bg-[#354635] w-full h-[800px] px-8 py-36 origin-background">
-
-      <div class="flex justify-around">
-
-        <div class="flex justify-center items-center">
-          <img src="src/assets/placeholder.jpg" alt="image" class="rounded-[35px]">
-          <div class="absolute flex justify-between items-center w-[400px] overflow-hidden">
-            <div
-              class="bg-black cursor-pointer h-[65px] w-[120px] -translate-x-[40px] rounded-[18px] opacity-65 flex justify-end px-2">
-              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                transform="matrix(-1, 0, 0, 1, 0, 0)">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-                    fill="#FFFFFF"></path>
-                </g>
-              </svg>
-            </div>
-            <div
-              class="bg-black cursor-pointer h-[65px] w-[120px] translate-x-[40px] rounded-[18px] opacity-65 flex justify-start px-2">
-              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                transform="matrix(1, 0, 0, 1, 0, 0)">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-                    fill="#FFFFFF"></path>
-                </g>
-              </svg>
-            </div>
-          </div>
+      <header class="flex mb-20 w-full h-auto backdrop-blur-[3px] px-18 py-3">
+        <div
+          class="flex flex-row ml-auto gap-30 text-center items-center header-text"
+        >
+          <a href="#origem"> ORIGEM </a>
+          <a href="#peso"> PESO </a>
+          <a href="#"> AJUDAR </a>
         </div>
+      </header>
 
-        <div>
-          <div class="flex-col">
-
-            <div class="mb-3">
-              <h1 class="text-[42px] text-[#8BCE95] text-right -mb-[8px] mr-2">
-                PROBLEMA
-              </h1>
-            </div>
-
-            <p class="text-justify max-w-100 text-[20px] text-[#D2FAD8] relative -translate-x-2 leading-tight">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo quos ex vitae ut placeat
-              deserunt
-              maxime reprehenderit eos nulla iste, consequatur quod eaque voluptate debitis voluptatum non consectetur
-              excepturi architecto praesentium? Est, illo. Voluptates possimus ducimus laborum dolorem suscipit,
-              recusandae veniam quae officiis provident quo enim modi commodi inventore neque eum fugiat quia corporis
-              tempore deleniti! Commodi, laudantium sapiente?
-            </p>
-
-          </div>
-
-          <div class="relative -right-16 -top-[313px]">
-            <hr class="border-[#8BCE95] border-[1px] w-70 static translate-x-14">
-            <hr class="border-[#8BCE95] border-[1px] w-45 static rotate-90 translate-x-[247px] translate-y-10">
-            <!--div de linhas estilizadsa-->
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <hr class="border-[#141CFF] border-4 elementsDivider">
-
-  <section id="peso" class="w-full flex flex-col bg-[#333345] overflow-hidden px-28">
-
-
-    <div class="flex w-1/2 justify-center gap-10 mx-auto relative -translate-y-24 mb-24">
-      <button
-        class="bg-[#141CFF] w-[58px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(6_0_184)] cursor-pointer mt-6 flex justify-center items-end" id="btnOcean"><svg width="54px" height="54px" fill="#0600b8" viewBox="0 0 512 512" id="waveIcon" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#0600b8" stroke-width="16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M106.8035965,360.2297058c0.0650024,0.0238953,0.1216049,0.0666809,0.1880035,0.0885925 c10.2118988,4.4396973,21.2959061,6.8283081,32.7538986,6.8283081c20.6387024,0,40.0513-7.5385132,55.2207031-21.3322144 c15.1651001,13.7937012,34.5771942,21.3322144,55.2158051,21.3322144c10.7539063,0,21.2294922-2.1383057,30.9472961-6.0935974 c0.1615906-0.0454102,0.309082-0.1098938,0.4653015-0.16922c10.1757813-4.2138977,19.4975891-10.4484863,27.3520813-18.4736938 c15.4492188,15.7906189,36.5429993,24.7365112,58.7593079,24.7365112c21.1162109,0,41.2216187-8.0953064,56.4331055-22.4619141 c0.0116882-0.0104065,0.023407-0.0185852,0.0346069-0.0292053c2.2197876-2.0983887,4.339386-4.3240967,6.3378906-6.6842957 c1.8887024-2.2352905,1.6094055-5.5776978-0.6206055-7.4714966c-2.2456055-1.8829956-5.5776062-1.6036072-7.4711914,0.6210022 c-1.2059937,1.425415-2.5184937,2.7290955-3.8193054,4.0462036c-29.559082-3.1033936-57.4086914-14.5657043-80.6591797-33.3768921 c-9.6572266-7.8137207-17.917511-16.8965149-24.7095032-27.053894c14.8671875,1.4095764,30.2832947-1.781311,43.9091797-10.2754211 c19.6918945-12.2776947,33.4185181-31.4933929,38.6596985-54.0977936 c5.2407227-22.6051025,1.360321-45.8977966-10.9174805-65.5892029c-15.1645203-24.3119965-38.8862-41.261795-66.7993164-47.7343979 c-21.8135071-5.0600967-44.1244812-3.1391983-64.4540863,5.1389999 c-22.3350067,3.290802-43.4536133,11.0590973-62.7769012,23.1054001 c-74.3266068,46.347496-110.3676071,135.1828003-90.488205,219.4818115 c-3.9462967-2.607605-7.6679993-5.6176147-11.1006012-9.0245056c-2.0644989-2.0539856-5.4272995-2.0487976-7.4916992,0.0310059 c-2.0590973,2.0748901-2.0488968,5.4277039,0.0311966,7.4917908 C89.1322021,350.5383911,97.6160965,356.2078857,106.8035965,360.2297058z M315.6932983,107.3612976 c25.1552124,5.8309021,46.5342102,21.1094055,60.1976929,43.0207977 c22.2583008,35.6893005,11.3311157,82.8283081-24.3583984,105.0864105 c-28.0527039,17.5029907-65.1229858,8.9042969-82.6107788-19.1487122 c-6.6333008-10.6321869-8.7285156-23.2097931-5.898407-35.4148865 c2.8299866-12.2052002,10.2440796-22.5841064,20.8764038-29.2118073 c8.2626953-5.1531067,18.0517883-6.7881012,27.5351868-4.5839996c9.4891968,2.1987,17.5551147,7.9626923,22.7080078,16.2304993 c1.5473022,2.4783936,4.8065796,3.2388,7.3007813,1.6918945c2.4833984-1.5470886,3.2387085-4.8171997,1.691925-7.3003998 c-6.6539001-10.668396-17.0635071-18.1033936-29.3101196-20.9440002 c-12.246582-2.8506012-24.8706055-0.7348938-35.5341797,5.9141083 c-13.0332031,8.1278992-22.1235046,20.8453979-25.5898132,35.8080902 c-3.4716949,14.9682007-0.9004059,30.38591,7.2275085,43.4192047 c9.3677063,15.0155945,23.5131836,25.2304077,39.2402039,30.0354919 c8.2055969,14.5870972,18.953186,27.4229126,32.1080017,38.0631104 c22.1971741,17.9570007,48.3104858,29.6901855,76.1532898,34.3594055 c-11.6607056,7.8036804-25.4003906,12.1639099-39.7246094,12.1639099c-21.0986938,0-41.0386047-9.26651-54.7133789-25.4242249 c-1.0088196-1.190094-2.4888-1.8783875-4.045929-1.8783875c-1.5575867,0-3.0370789,0.6882935-4.0458984,1.8728943 c-7.0131836,8.2901917-15.6913757,14.7294006-25.3134766,19.0708923 c-31.6587067-12.0195007-57.8955078-33.5122986-75.8979034-62.3811035 c-17.2705078-27.6905823-22.7183075-60.4462891-15.3511047-92.2345886 c7.367691-31.7882996,26.6768036-58.8013916,54.3672028-76.0663986 C264.6166077,105.8452988,290.5325928,101.5197983,315.6932983,107.3612976z M196.4613037,134.2754974 c8.1674957-5.093399,16.6929016-9.3236008,25.4946899-12.7661972 c-21.9833984,18.3850021-37.3574982,43.2690048-43.9389954,71.6762009 c-8.0097961,34.5457916-2.0854034,70.1421051,16.6806946,100.2334137 c16.9638062,27.2001953,40.7602081,48.2844849,69.3340149,61.7087708 c-4.5278931,0.8925171-9.151413,1.4227295-13.8497009,1.4227295c-19.5161133,0-37.7749023-7.7402039-51.4130096-21.7977295 c-0.9985962-1.0292969-2.3696899-1.6088867-3.8027954-1.6088867s-2.8041992,0.5795898-3.8027039,1.6088867 c-13.6436005,14.0575256-31.9024048,21.7977295-51.4179993,21.7977295c-9.2987976,0-18.3227005-1.7902222-26.7080002-5.1583252 C89.2835999,268.8634949,123.3314972,179.8789063,196.4613037,134.2754974z"></path> <path d="M422.4197998,381.716095c-13.6742859,16.1629944-33.6195984,25.4295959-54.7138062,25.4295959 c-21.0986938,0-41.0386047-9.2666016-54.7133789-25.4244995c-1.0088196-1.1900024-2.4888-1.8782043-4.045929-1.8782043 c-1.5575867,0-3.0370789,0.6882019-4.0458984,1.8731079c-13.6747742,16.1629944-33.6200867,25.4295959-54.7187805,25.4295959 c-19.5161133,0-37.7749023-7.7399902-51.4130096-21.797699c-0.9985962-1.0292053-2.3696899-1.6088867-3.8027954-1.6088867 s-2.8041992,0.5796814-3.8027039,1.6088867c-13.6436005,14.0577087-31.9024048,21.797699-51.4179993,21.797699 c-19.0345993,0-36.9618988-7.3883972-50.4813995-20.8094788c-2.0644989-2.0539246-5.4272995-2.0489197-7.4916992,0.0310974 c-2.0590973,2.0746765-2.0488968,5.4274902,0.0311966,7.4915771c15.5161057,15.4029236,36.092804,23.8830261,57.9419022,23.8830261 c20.6387024,0,40.0513-7.5385132,55.2207031-21.3321228c15.1651001,13.7936096,34.5771942,21.3321228,55.2158051,21.3321228 c22.2109985,0,43.3100891-8.9458008,58.764679-24.7365112c15.4492188,15.7907104,36.5429993,24.7365112,58.7593079,24.7365112 c24.2138062,0,47.1083984-10.6324158,62.805603-29.1755066c1.8887024-2.2351074,1.6094055-5.5775146-0.6206055-7.4710999 C427.6453857,379.2067871,424.313385,379.491394,422.4197998,381.716095z"></path> </g> </g></svg></button>
-      <button class="bg-[#6D9770] w-[58px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(74,107,77,1)] cursor-pointer mb-4 flex justify-center items-end pb-3" id="btnLand"><svg fill="#4a6b4d" height="34px" width="34px" version="1.1" id="sproutIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M389.212,345.155c-8.41-0.022-20.264-0.099-28.359,0.115c-16.769-35.403-50.111-60.158-88.446-65.783v-45.802 c30.67-0.559,92.052-8.548,141.9-58.396c67.902-67.913,58.174-155.99,57.717-159.767c-0.903-7.663-6.945-13.702-14.609-14.614 c-3.793-0.441-93.272-11.402-161.163,56.51c-17.35,17.35-29.585,36.089-38.248,54.448C230.12,46.069,164.755,0,88.755,0H55.364 c-9.217,0-16.696,7.473-16.696,16.696v33.391c0,101.266,82.391,183.6,183.652,183.6h16.696v45.784 c-38.31,5.592-71.729,30.221-88.533,65.573h-28.403c-75.206,0-116.804,66.337-116.804,112.19c0,31.97,19.02,54.766,50.022,54.766 h400.696c31.717,0,50.728-22.798,50.728-54.37C506.723,411.614,464.875,345.155,389.212,345.155z M319.862,81.026 c41.609-41.603,94.467-46.837,119.392-47.348c-0.511,24.951-6.968,76.397-48.554,118c-29.95,29.943-65.678,41.633-92.671,46.05 l69.663-69.664c6.521-6.516,6.521-17.092,0-23.609c-6.521-6.521-17.087-6.521-23.609,0l-70.649,70.649 C277.603,148.073,289.168,111.722,319.862,81.026z M167.343,104.457c-6.521-6.521-17.087-6.521-23.609,0 c-6.521,6.516-6.521,17.092,0,23.609l71.308,71.308C135.573,195.573,72.06,130.483,72.06,50.087V33.391h16.696 c80.4,0,146.055,62.945,149.891,142.371L167.343,104.457z"></path> </g> </g> </g></svg></button>
-      <button
-        class="bg-[#CFC874] w-[58px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(206_162_79)] cursor-pointer mb-4 flex justify-center items-end pb-2 pl-1" id="btnAir"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003" width="40px" height="40px"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 2.79086 8.79086 1 11 1C13.2091 1 15 2.79086 15 5C15 7.20914 13.2091 9 11 9H3C2.44772 9 2 8.55228 2 8C2 7.44772 2.44772 7 3 7H11C12.1046 7 13 6.10457 13 5C13 3.89543 12.1046 3 11 3C9.89543 3 9 3.89543 9 5V5.1C9 5.65228 8.55228 6.1 8 6.1C7.44772 6.1 7 5.65228 7 5.1V5ZM16.9 6C16.9 5.44772 17.3477 5 17.9 5H18C20.2091 5 22 6.79086 22 9C22 11.2091 20.2091 13 18 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H18C19.1046 11 20 10.1046 20 9C20 7.89543 19.1046 7 18 7H17.9C17.3477 7 16.9 6.55228 16.9 6ZM0 12C0 11.4477 0.447715 11 1 11H2C2.55228 11 3 11.4477 3 12C3 12.5523 2.55228 13 2 13H1C0.447715 13 0 12.5523 0 12ZM4 16C4 15.4477 4.44772 15 5 15H6C6.55228 15 7 15.4477 7 16C7 16.5523 6.55228 17 6 17H5C4.44772 17 4 16.5523 4 16ZM8 16C8 15.4477 8.44772 15 9 15H13C15.2091 15 17 16.7909 17 19C17 21.2091 15.2091 23 13 23C10.7909 23 9 21.2091 9 19V18.9C9 18.3477 9.44771 17.9 10 17.9C10.5523 17.9 11 18.3477 11 18.9V19C11 20.1046 11.8954 21 13 21C14.1046 21 15 20.1046 15 19C15 17.8954 14.1046 17 13 17H9C8.44772 17 8 16.5523 8 16Z" fill="#cea24f" id="windIcon"></path> </g></svg></button>
-    </div>
-
-    <div class="flex justify-center flex-col items-center mb-20">
-      <h1 class="text-5xl font-light mb-2 text-[#141CFF] text-shadow-[0px_0px_12px]/50 text-shadow-white colorText" id="pollution">POLUIÇÃO: ÁGUA</h1>
-      <hr class="border-2 w-120 border-[#0700e0] mb-10 colorLine">
-
-      <p class="max-w-160 text-md text-white tracking-tight text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus ut, repellendus itaque enim ipsa
-        tempore illo dolore vel error atque eum voluptas. Quas enim rem consectetur. Dicta ratione accusantium fuga
-        beatae placeat omnis libero quisquam officiis quod? Ipsa perferendis, officiis voluptatibus voluptas dignissimos
-        corporis in velit rerum tempora eligendi atque, similique illum incidunt necessitatibus id nemo dolorum quia
-        pariatur numquam! Laudantium ad non incidunt recusandae, explicabo ab?
-      </p>
-    </div>
-
-    <div class="flex justify-center mb-42">
-      <img src="src/assets/placeholder2.jpg" alt="placeholder" class="rounded-2xl">
-
-      <div class="absolute">
-        <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]">
-        <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270">
-      </div>
-
-      <div class="absolute rotate-180 translate-y-[445px]">
-        <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]">
-        <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270">
-      </div>
-
-    </div>
-
-    <div class="flex justify-between mb-42">
-
-      <div class="flex justify-center items-center overflow-hidden">
-        <img src="src/assets/placeholder3.jpg" alt="image" class="rounded-2xl">
-      </div>
-
-      <div class="flex-col static -translate-y-10">
-
-        <div class="mb-3 relative">
-          <h1 class="text-[40px] text-[#141CFF] colorText text-right -mb-[8px] mr-2">
-            CONSEQUÊNCIA
-          </h1>
-
-          <div>
-            <hr class="border-[#0700e0] colorLine border-[1px] w-70 absolute translate-x-14">
-            <hr class="border-[#0700e0] colorLine border-[1px] w-45 absolute rotate-90 translate-x-[247px] translate-y-10">
-          </div>
-        </div>
-
-        <p class="text-justify max-w-84 text-[17px] text-white relative -translate-x-2 leading-tight">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo quos ex vitae ut placeat deserunt
-          maxime reprehenderit eos nulla iste, consequatur quod eaque voluptate debitis voluptatum non consectetur
-          excepturi architecto praesentium? Est, illo. Voluptates possimus ducimus laborum dolorem suscipit, recusandae
-          veniam quae officiis provident quo enim modi commodi inventore neque eum fugiat quia corporis tempore
-          deleniti! Commodi, laudantium sapiente?
+      <div class="flex flex-col justify-self-center text-center mb-94 mx-15">
+        <p
+          class="text-6xl tracking-widest text-shadow-[3px_6px_5px_rgb(45_45_45/_0.8)] mb-1 nexus"
+        >
+          NEXUS
         </p>
-
+        <p
+          class="text-3xl text-[#cdf187] tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]"
+        >
+          ambiental
+        </p>
       </div>
 
-    </div>
-  </section>
+      <p
+        class="text-center text-3xl text-[#cdf187] tracking-wider text-shadow-[0px_0px_15px_rgb(45_60_45/_1)]"
+      >
+        Realçando o nexo<br />mais importante.
+      </p>
+    </section>
 
-  <hr class="border-[#141CFF] border-4 elementsDivider">
+    <section id="origem" class="">
+      <div
+        class="absolute w-full h-[250px] -translate-y-[250px] fade-transition"
+      ></div>
 
-  <section class="bg-[#4f4e4e] h-[650px]">
-    <div class="flex justify-center flex-col items-center mb-20">
-      <h1 class="text-3xl font-light mb-1 text-[#d6dade] mt-16">como</h1>
-      <hr class="border-2 w-120 border-[#b7bdc3]">
-      <h1 class="text-5xl font-light text-[#d6dade]">AJUDAR</h1>
-    </div>
-
-    <div
-      class="w-full h-[500px] border-t-3 border-b-3 border-[#b7bdc3] absolute left-1/2 -translate-x-1/2 overflow-hidden mb-10">
-      <div class="absolute w-full h-full bg-linear-to-r from-black from-10% via-transparent to-black to-90% opacity-60">
-      </div>
-      <div class="absolute w-full h-full bg-black opacity-15"></div>
-      <div class="flex gap-0 justify-center">
-
-
-        <div class="absolute flex flex-col justify-center items-center text-center">
-          <div class="mt-8 text-white mb-45">
-            <div class="text-lg">
-              Transporte
+      <div class="bg-[#354635] w-full h-[800px] px-8 py-36 origin-background">
+        <div class="flex justify-around">
+          <div class="flex justify-center items-center">
+            <img
+              src="src/assets/placeholder.jpg"
+              alt="image"
+              class="rounded-[35px]"
+            />
+            <div
+              class="absolute flex justify-between items-center w-[400px] overflow-hidden"
+            >
+              <div
+                class="bg-black cursor-pointer h-[65px] w-[120px] -translate-x-[40px] rounded-[18px] opacity-65 flex justify-end px-2"
+              >
+                <svg
+                  width="64px"
+                  height="64px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="matrix(-1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                      fill="#FFFFFF"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-black cursor-pointer h-[65px] w-[120px] translate-x-[40px] rounded-[18px] opacity-65 flex justify-start px-2"
+              >
+                <svg
+                  width="64px"
+                  height="64px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                      fill="#FFFFFF"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="font-bold text-3xl -mt-2 tracking-wide">
-              SUSTENTÁVEL
-            </div>
-          </div>
-
-          <div class="max-w-[600px] text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia modi inventore tempora voluptatem
-            molestias, ut architecto alias excepturi nostrum officiis quibusdam nihil fuga aspernatur illum facilis!
-            Minus eius eaque atque a harum dolorum eum architecto, eligendi nostrum beatae consectetur libero repellat?
-            Quo, minus ducimus!
-          </div>
-
-        </div>
-
-        <img src="src/assets/sliderplaceholder2.jpg">
-        <img src="src/assets/sliderplaceholder1.jpg">
-        <img src="src/assets/sliderplaceholder3.jpg">
-      </div>
-    </div>
-  </section>
-
-  <footer class="w-full h-[450px] bg-[#4f4e4e] -z-1 relative">
-
-    <div>
-      <div class="absolute w-full h-[450px] bg-radial from-[#b7bdc3] to-transparent to-60% opacity-35 z-1"></div>
-      <hr class="mx-auto border-2 border-[#b7bdc3] w-[800px] mb-40">
-
-      <div class="flex flex-row justify-around relative z-2">
-        <div class="flex-col">
-          <div class="max-w-[305px] text-white font-light tracking-wide text-[23px] mb-16 leading-tight">
-            Registre-se e receba e-mails com atualizações de nosso site.
           </div>
 
           <div>
-            <div class="text-3xl font-light mb-1 ml-3 text-[#d6dade]">
-              Endereço de e-mail
+            <div class="flex-col">
+              <div class="mb-3">
+                <h1
+                  class="text-[42px] text-[#8BCE95] text-right -mb-[8px] mr-2"
+                >
+                  PROBLEMA
+                </h1>
+              </div>
+
+              <p
+                class="text-justify max-w-100 text-[20px] text-[#D2FAD8] relative -translate-x-2 leading-tight"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aspernatur nemo quos ex vitae ut placeat deserunt maxime
+                reprehenderit eos nulla iste, consequatur quod eaque voluptate
+                debitis voluptatum non consectetur excepturi architecto
+                praesentium? Est, illo. Voluptates possimus ducimus laborum
+                dolorem suscipit, recusandae veniam quae officiis provident quo
+                enim modi commodi inventore neque eum fugiat quia corporis
+                tempore deleniti! Commodi, laudantium sapiente?
+              </p>
             </div>
 
-            <hr class="border-1 border-[#b7bdc3] w-[400px]">
-          </div>
-        </div>
-
-        <div>
-          <div class="text-white font-light tracking-wide text-[25px] mb-16 leading-tight">
-            <div class="text-right">
-              Nos siga em:
+            <div class="relative -right-16 -top-[313px]">
+              <hr
+                class="border-[#8BCE95] border-[1px] w-70 static translate-x-14"
+              />
+              <hr
+                class="border-[#8BCE95] border-[1px] w-45 static rotate-90 translate-x-[247px] translate-y-10"
+              />
+              <!--div de linhas estilizadsa-->
             </div>
-
-            <hr class="border-1 border-[#b7bdc3] w-[185px] absolute rotate-90 translate-x-[90px] translate-y-16">
-          </div>
-
-          <div class="flex mt-26 justify-between relative -translate-x-16">
-            <a href="">a</a>
-            <a href="">x</a>
-            <a href="">i</a>
           </div>
         </div>
-
       </div>
-    </div>
+    </section>
 
-    <div class="absolute bottom-0 z-2 w-full text-center text-[#757571]">
-      2025 © NEXUS AMBIENTAL. Todos direitos reservados.
-    </div>
+    <hr class="border-[#141CFF] border-4 elementsDivider" />
 
-  </footer>
+    <!-- index.html -->
 
-  <script type="module" src="/src/main.jsx"></script>
-  <script src="src/script.js"></script>
-</body>
+    <!-- index.html -->
+    <section
+      id="peso"
+      class="w-full flex flex-col bg-[url('src/assets/ocean.jpg')] bg-center bg-cover bg-no-repeat overflow-hidden px-28 transition-[background-image] duration-700 ease-in-out relative z-0 before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:-z-10"
+    >
+      <div
+        class="flex w-1/2 justify-center gap-10 mx-auto relative -translate-y-24 mb-24"
+      >
+        <button
+          class="bg-[#141CFF] w-[58px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(6_0_184)] cursor-pointer mt-6 flex justify-center items-end"
+          id="btnOcean"
+        >
+          <svg
+            width="54px"
+            height="54px"
+            fill="#0600b8"
+            viewBox="0 0 512 512"
+            id="waveIcon"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            stroke="#0600b8"
+            stroke-width="16"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path
+                  d="M106.8035965,360.2297058c0.0650024,0.0238953,0.1216049,0.0666809,0.1880035,0.0885925 c10.2118988,4.4396973,21.2959061,6.8283081,32.7538986,6.8283081c20.6387024,0,40.0513-7.5385132,55.2207031-21.3322144 c15.1651001,13.7937012,34.5771942,21.3322144,55.2158051,21.3322144c10.7539063,0,21.2294922-2.1383057,30.9472961-6.0935974 c0.1615906-0.0454102,0.309082-0.1098938,0.4653015-0.16922c10.1757813-4.2138977,19.4975891-10.4484863,27.3520813-18.4736938 c15.4492188,15.7906189,36.5429993,24.7365112,58.7593079,24.7365112c21.1162109,0,41.2216187-8.0953064,56.4331055-22.4619141 c0.0116882-0.0104065,0.023407-0.0185852,0.0346069-0.0292053c2.2197876-2.0983887,4.339386-4.3240967,6.3378906-6.6842957 c1.8887024-2.2352905,1.6094055-5.5776978-0.6206055-7.4714966c-2.2456055-1.8829956-5.5776062-1.6036072-7.4711914,0.6210022 c-1.2059937,1.425415-2.5184937,2.7290955-3.8193054,4.0462036c-29.559082-3.1033936-57.4086914-14.5657043-80.6591797-33.3768921 c-9.6572266-7.8137207-17.917511-16.8965149-24.7095032-27.053894c14.8671875,1.4095764,30.2832947-1.781311,43.9091797-10.2754211 c19.6918945-12.2776947,33.4185181-31.4933929,38.6596985-54.0977936 c5.2407227-22.6051025,1.360321-45.8977966-10.9174805-65.5892029c-15.1645203-24.3119965-38.8862-41.261795-66.7993164-47.7343979 c-21.8135071-5.0600967-44.1244812-3.1391983-64.4540863,5.1389999 c-22.3350067,3.290802-43.4536133,11.0590973-62.7769012,23.1054001 c-74.3266068,46.347496-110.3676071,135.1828003-90.488205,219.4818115 c-3.9462967-2.607605-7.6679993-5.6176147-11.1006012-9.0245056c-2.0644989-2.0539856-5.4272995-2.0487976-7.4916992,0.0310059 c-2.0590973,2.0748901-2.0488968,5.4277039,0.0311966,7.4917908 C89.1322021,350.5383911,97.6160965,356.2078857,106.8035965,360.2297058z M315.6932983,107.3612976 c25.1552124,5.8309021,46.5342102,21.1094055,60.1976929,43.0207977 c22.2583008,35.6893005,11.3311157,82.8283081-24.3583984,105.0864105 c-28.0527039,17.5029907-65.1229858,8.9042969-82.6107788-19.1487122 c-6.6333008-10.6321869-8.7285156-23.2097931-5.898407-35.4148865 c2.8299866-12.2052002,10.2440796-22.5841064,20.8764038-29.2118073 c8.2626953-5.1531067,18.0517883-6.7881012,27.5351868-4.5839996c9.4891968,2.1987,17.5551147,7.9626923,22.7080078,16.2304993 c1.5473022,2.4783936,4.8065796,3.2388,7.3007813,1.6918945c2.4833984-1.5470886,3.2387085-4.8171997,1.691925-7.3003998 c-6.6539001-10.668396-17.0635071-18.1033936-29.3101196-20.9440002 c-12.246582-2.8506012-24.8706055-0.7348938-35.5341797,5.9141083 c-13.0332031,8.1278992-22.1235046,20.8453979-25.5898132,35.8080902 c-3.4716949,14.9682007-0.9004059,30.38591,7.2275085,43.4192047 c9.3677063,15.0155945,23.5131836,25.2304077,39.2402039,30.0354919 c8.2055969,14.5870972,18.953186,27.4229126,32.1080017,38.0631104 c22.1971741,17.9570007,48.3104858,29.6901855,76.1532898,34.3594055 c-11.6607056,7.8036804-25.4003906,12.1639099-39.7246094,12.1639099c-21.0986938,0-41.0386047-9.26651-54.7133789-25.4242249 c-1.0088196-1.190094-2.4888-1.8783875-4.045929-1.8783875c-1.5575867,0-3.0370789,0.6882935-4.0458984,1.8728943 c-7.0131836,8.2901917-15.6913757,14.7294006-25.3134766,19.0708923 c-31.6587067-12.0195007-57.8955078-33.5122986-75.8979034-62.3811035 c-17.2705078-27.6905823-22.7183075-60.4462891-15.3511047-92.2345886 c7.367691-31.7882996,26.6768036-58.8013916,54.3672028-76.0663986 C264.6166077,105.8452988,290.5325928,101.5197983,315.6932983,107.3612976z M196.4613037,134.2754974 c8.1674957-5.093399,16.6929016-9.3236008,25.4946899-12.7661972 c-21.9833984,18.3850021-37.3574982,43.2690048-43.9389954,71.6762009 c-8.0097961,34.5457916-2.0854034,70.1421051,16.6806946,100.2334137 c16.9638062,27.2001953,40.7602081,48.2844849,69.3340149,61.7087708 c-4.5278931,0.8925171-9.151413,1.4227295-13.8497009,1.4227295c-19.5161133,0-37.7749023-7.7402039-51.4130096-21.7977295 c-0.9985962-1.0292969-2.3696899-1.6088867-3.8027954-1.6088867s-2.8041992,0.5795898-3.8027039,1.6088867 c-13.6436005,14.0575256-31.9024048,21.7977295-51.4179993,21.7977295c-9.2987976,0-18.3227005-1.7902222-26.7080002-5.1583252 C89.2835999,268.8634949,123.3314972,179.8789063,196.4613037,134.2754974z"
+                ></path>
+                <path
+                  d="M422.4197998,381.716095c-13.6742859,16.1629944-33.6195984,25.4295959-54.7138062,25.4295959 c-21.0986938,0-41.0386047-9.2666016-54.7133789-25.4244995c-1.0088196-1.1900024-2.4888-1.8782043-4.045929-1.8782043 c-1.5575867,0-3.0370789,0.6882019-4.0458984,1.8731079c-13.6747742,16.1629944-33.6200867,25.4295959-54.7187805,25.4295959 c-19.5161133,0-37.7749023-7.7399902-51.4130096-21.797699c-0.9985962-1.0292053-2.3696899-1.6088867-3.8027954-1.6088867 s-2.8041992,0.5796814-3.8027039,1.6088867c-13.6436005,14.0577087-31.9024048,21.797699-51.4179993,21.797699 c-19.0345993,0-36.9618988-7.3883972-50.4813995-20.8094788c-2.0644989-2.0539246-5.4272995-2.0489197-7.4916992,0.0310974 c-2.0590973,2.0746765-2.0488968,5.4274902,0.0311966,7.4915771c15.5161057,15.4029236,36.092804,23.8830261,57.9419022,23.8830261 c20.6387024,0,40.0513-7.5385132,55.2207031-21.3321228c15.1651001,13.7936096,34.5771942,21.3321228,55.2158051,21.3321228 c22.2109985,0,43.3100891-8.9458008,58.764679-24.7365112c15.4492188,15.7907104,36.5429993,24.7365112,58.7593079,24.7365112 c24.2138062,0,47.1083984-10.6324158,62.805603-29.1755066c1.8887024-2.2351074,1.6094055-5.5775146-0.6206055-7.4710999 C427.6453857,379.2067871,424.313385,379.491394,422.4197998,381.716095z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+        <button
+          class="bg-[#6D9770] w-[58px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(74,107,77,1)] cursor-pointer mb-4 flex justify-center items-end pb-3"
+          id="btnLand"
+        >
+          <svg
+            fill="#4a6b4d"
+            height="34px"
+            width="34px"
+            version="1.1"
+            id="sproutIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M389.212,345.155c-8.41-0.022-20.264-0.099-28.359,0.115c-16.769-35.403-50.111-60.158-88.446-65.783v-45.802 c30.67-0.559,92.052-8.548,141.9-58.396c67.902-67.913,58.174-155.99,57.717-159.767c-0.903-7.663-6.945-13.702-14.609-14.614 c-3.793-0.441-93.272-11.402-161.163,56.51c-17.35,17.35-29.585,36.089-38.248,54.448C230.12,46.069,164.755,0,88.755,0H55.364 c-9.217,0-16.696,7.473-16.696,16.696v33.391c0,101.266,82.391,183.6,183.652,183.6h16.696v45.784 c-38.31,5.592-71.729,30.221-88.533,65.573h-28.403c-75.206,0-116.804,66.337-116.804,112.19c0,31.97,19.02,54.766,50.022,54.766 h400.696c31.717,0,50.728-22.798,50.728-54.37C506.723,411.614,464.875,345.155,389.212,345.155z M319.862,81.026 c41.609-41.603,94.467-46.837,119.392-47.348c-0.511,24.951-6.968,76.397-48.554,118c-29.95,29.943-65.678,41.633-92.671,46.05 l69.663-69.664c6.521-6.516,6.521-17.092,0-23.609c-6.521-6.521-17.087-6.521-23.609,0l-70.649,70.649 C277.603,148.073,289.168,111.722,319.862,81.026z M167.343,104.457c-6.521-6.521-17.087-6.521-23.609,0 c-6.521,6.516-6.521,17.092,0,23.609l71.308,71.308C135.573,195.573,72.06,130.483,72.06,50.087V33.391h16.696 c80.4,0,146.055,62.945,149.891,142.371L167.343,104.457z"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+        <button
+          class="bg-[#CFC874] w-[58px] h-[150px] rounded-3xl shadow-[0px_8px_rgba(206_162_79)] cursor-pointer mb-4 flex justify-center items-end pb-2 pl-1"
+          id="btnAir"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#000000"
+            stroke-width="0.00024000000000000003"
+            width="40px"
+            height="40px"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7 5C7 2.79086 8.79086 1 11 1C13.2091 1 15 2.79086 15 5C15 7.20914 13.2091 9 11 9H3C2.44772 9 2 8.55228 2 8C2 7.44772 2.44772 7 3 7H11C12.1046 7 13 6.10457 13 5C13 3.89543 12.1046 3 11 3C9.89543 3 9 3.89543 9 5V5.1C9 5.65228 8.55228 6.1 8 6.1C7.44772 6.1 7 5.65228 7 5.1V5ZM16.9 6C16.9 5.44772 17.3477 5 17.9 5H18C20.2091 5 22 6.79086 22 9C22 11.2091 20.2091 13 18 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H18C19.1046 11 20 10.1046 20 9C20 7.89543 19.1046 7 18 7H17.9C17.3477 7 16.9 6.55228 16.9 6ZM0 12C0 11.4477 0.447715 11 1 11H2C2.55228 11 3 11.4477 3 12C3 12.5523 2.55228 13 2 13H1C0.447715 13 0 12.5523 0 12ZM4 16C4 15.4477 4.44772 15 5 15H6C6.55228 15 7 15.4477 7 16C7 16.5523 6.55228 17 6 17H5C4.44772 17 4 16.5523 4 16ZM8 16C8 15.4477 8.44772 15 9 15H13C15.2091 15 17 16.7909 17 19C17 21.2091 15.2091 23 13 23C10.7909 23 9 21.2091 9 19V18.9C9 18.3477 9.44771 17.9 10 17.9C10.5523 17.9 11 18.3477 11 18.9V19C11 20.1046 11.8954 21 13 21C14.1046 21 15 20.1046 15 19C15 17.8954 14.1046 17 13 17H9C8.44772 17 8 16.5523 8 16Z"
+                fill="#cea24f"
+                id="windIcon"
+              ></path>
+            </g>
+          </svg>
+        </button>
+      </div>
 
+      <div class="flex justify-center flex-col items-center mb-20">
+        <h1
+          class="text-5xl font-light mb-2 text-[#141CFF] text-shadow-[0px_0px_12px]/50 text-shadow-white colorText"
+          id="pollution"
+        >
+          POLUIÇÃO: ÁGUA
+        </h1>
+        <hr class="border-2 w-120 border-[#0700e0] mb-10 colorLine" />
+
+        <p class="max-w-160 text-md text-white tracking-tight text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          doloribus ut, repellendus itaque enim ipsa tempore illo dolore vel
+          error atque eum voluptas. Quas enim rem consectetur. Dicta ratione
+          accusantium fuga beatae placeat omnis libero quisquam officiis quod?
+          Ipsa perferendis, officiis voluptatibus voluptas dignissimos corporis
+          in velit rerum tempora eligendi atque, similique illum incidunt
+          necessitatibus id nemo dolorum quia pariatur numquam! Laudantium ad
+          non incidunt recusandae, explicabo ab?
+        </p>
+      </div>
+
+      <div class="flex justify-center mb-42">
+        <img
+          src="src/assets/placeholder2.jpg"
+          alt="placeholder"
+          class="rounded-2xl"
+        />
+
+        <div class="absolute">
+          <hr
+            class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]"
+          />
+          <hr
+            class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270"
+          />
+        </div>
+
+        <div class="absolute rotate-180 translate-y-[445px]">
+          <hr
+            class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]"
+          />
+          <hr
+            class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-between mb-42">
+        <div class="flex justify-center items-center overflow-hidden">
+          <img
+            src="src/assets/placeholder3.jpg"
+            alt="image"
+            class="rounded-2xl"
+          />
+        </div>
+
+        <div class="flex-col static -translate-y-10">
+          <div class="mb-3 relative">
+            <h1
+              class="text-[40px] text-[#141CFF] colorText text-right -mb-[8px] mr-2"
+            >
+              CONSEQUÊNCIA
+            </h1>
+
+            <div>
+              <hr
+                class="border-[#0700e0] colorLine border-[1px] w-70 absolute translate-x-14"
+              />
+              <hr
+                class="border-[#0700e0] colorLine border-[1px] w-45 absolute rotate-90 translate-x-[247px] translate-y-10"
+              />
+            </div>
+          </div>
+
+          <p
+            class="text-justify max-w-84 text-[17px] text-white relative -translate-x-2 leading-tight"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
+            nemo quos ex vitae ut placeat deserunt maxime reprehenderit eos
+            nulla iste, consequatur quod eaque voluptate debitis voluptatum non
+            consectetur excepturi architecto praesentium? Est, illo. Voluptates
+            possimus ducimus laborum dolorem suscipit, recusandae veniam quae
+            officiis provident quo enim modi commodi inventore neque eum fugiat
+            quia corporis tempore deleniti! Commodi, laudantium sapiente?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-[#141CFF] border-4 elementsDivider" />
+
+    <section class="bg-[#4f4e4e] h-[650px]">
+      <div class="flex justify-center flex-col items-center mb-20">
+        <h1 class="text-3xl font-light mb-1 text-[#d6dade] mt-16">como</h1>
+        <hr class="border-2 w-120 border-[#b7bdc3]" />
+        <h1 class="text-5xl font-light text-[#d6dade]">AJUDAR</h1>
+      </div>
+
+      <div
+        class="w-full h-[500px] border-t-3 border-b-3 border-[#b7bdc3] absolute left-1/2 -translate-x-1/2 overflow-hidden mb-10"
+      >
+        <div
+          class="absolute w-full h-full bg-linear-to-r from-black from-10% via-transparent to-black to-90% opacity-60"
+        ></div>
+        <div class="absolute w-full h-full bg-black opacity-15"></div>
+        <div class="flex gap-0 justify-center">
+          <div
+            class="absolute flex flex-col justify-center items-center text-center"
+          >
+            <div class="mt-8 text-white mb-45">
+              <div class="text-lg">Transporte</div>
+              <div class="font-bold text-3xl -mt-2 tracking-wide">
+                SUSTENTÁVEL
+              </div>
+            </div>
+
+            <div class="max-w-[600px] text-white">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              mollitia modi inventore tempora voluptatem molestias, ut
+              architecto alias excepturi nostrum officiis quibusdam nihil fuga
+              aspernatur illum facilis! Minus eius eaque atque a harum dolorum
+              eum architecto, eligendi nostrum beatae consectetur libero
+              repellat? Quo, minus ducimus!
+            </div>
+          </div>
+
+          <img src="src/assets/sliderplaceholder2.jpg" />
+          <img src="src/assets/sliderplaceholder1.jpg" />
+          <img src="src/assets/sliderplaceholder3.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full h-[450px] bg-[#4f4e4e] -z-1 relative">
+      <div>
+        <div
+          class="absolute w-full h-[450px] bg-radial from-[#b7bdc3] to-transparent to-60% opacity-35 z-1"
+        ></div>
+        <hr class="mx-auto border-2 border-[#b7bdc3] w-[800px] mb-40" />
+
+        <div class="flex flex-row justify-around relative z-2">
+          <div class="flex-col">
+            <div
+              class="max-w-[305px] text-white font-light tracking-wide text-[23px] mb-16 leading-tight"
+            >
+              Registre-se e receba e-mails com atualizações de nosso site.
+            </div>
+
+            <div>
+              <div class="text-3xl font-light mb-1 ml-3 text-[#d6dade]">
+                Endereço de e-mail
+              </div>
+
+              <hr class="border-1 border-[#b7bdc3] w-[400px]" />
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="text-white font-light tracking-wide text-[25px] mb-16 leading-tight"
+            >
+              <div class="text-right">Nos siga em:</div>
+
+              <hr
+                class="border-1 border-[#b7bdc3] w-[185px] absolute rotate-90 translate-x-[90px] translate-y-16"
+              />
+            </div>
+
+            <div class="flex mt-26 justify-between relative -translate-x-16">
+              <a href="">a</a>
+              <a href="">x</a>
+              <a href="">i</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 z-2 w-full text-center text-[#757571]">
+        2025 © NEXUS AMBIENTAL. Todos direitos reservados.
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="src/script.js"></script>
+  </body>
 </html>
