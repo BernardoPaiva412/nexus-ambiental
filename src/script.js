@@ -13,9 +13,9 @@ const colorLines = document.querySelectorAll(".colorLine")
 const colorTexts = document.querySelectorAll(".colorText")
 
 // Definição das classes das imagens para facilitar a troca
-const bgWaterClass = "bg-[url('src/assets/ocean.jpg')]"
-const bgLandClass = "bg-[url('src/assets/green.jpg')]"
-const bgAirClass = "bg-[url('src/assets/sky.jpg')]"
+const bgWaterClass = "bg-[url('src/assets/polluted-water.jpg')]"
+const bgLandClass = "bg-[url('src/assets/polluted-land.jpg')]"
+const bgAirClass = "bg-[url('src/assets/polluted-air.jpg')]"
 
 btnOcean.addEventListener('click', () => {
     //water shadow hex #0700e0
