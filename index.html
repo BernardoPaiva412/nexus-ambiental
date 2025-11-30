@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 
-<body class="font-anta overflow-x-hidden">
+<body class="font-nsm overflow-x-hidden">
 
   <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -47,7 +47,7 @@
 
         <!-- Header -->
         <header
-          class="flex mb-10 lg:mb-20 w-full h-auto backdrop-blur-[3px] px-4 lg:px-18 py-3 justify-center items-center">
+          class="font-anta flex mb-10 lg:mb-20 w-full h-auto backdrop-blur-[3px] px-4 lg:px-18 py-3 justify-center items-center">
           <div class="flex lg:ml-auto gap-6 lg:gap-30 justify-center items-center header-text mt-4 lg:mt-0 ">
             <a href="#origem" class="text-white hover:text-[#cdf187] transition-colors text-center">ORIGEM</a>
             <a href="#peso" class="text-white hover:text-[#cdf187] transition-colors text-center">PESO</a>
@@ -57,9 +57,9 @@
 
         <!-- Title -->
         <div class="flex flex-col justify-self-center text-center mb-20 lg:mb-94 mx-4 lg:mx-15">
-          <p class="text-4xl lg:text-6xl tracking-widest mb-1 nexus text-white">
+          <p class="font-anta text-4xl lg:text-6xl tracking-widest mb-1 nexus text-white">
             NEXUS</p>
-          <p class="text-xl lg:text-3xl text-[#cdf187] tracking-wider">
+          <p class="font-anta text-xl lg:text-3xl text-[#cdf187] tracking-wider ambiental">
             ambiental
           </p>
         </div>
@@ -71,80 +71,60 @@
         </button>
       </section>
 
+      <div class="absolute w-full h-[250px] -translate-y-[250px] fade-transition hidden lg:block"></div>
       <!-- ORIGEM SECTION -->
-      <section id="origem" class="">
-        <div class="absolute w-full h-[250px] -translate-y-[250px] fade-transition hidden lg:block"></div>
+      <section id="origem" class="h-auto px-8 py-10 lg:px-8 lg:py-32 lg:pb-40 origin-background">
 
-        <!-- Mobile: h-auto px-4 py-10 | Desktop: h-[800px] px-8 py-36 -->
-        <div class="bg-[#354635] w-full h-auto lg:h-[800px] px-4 lg:px-8 py-10 lg:py-36 origin-background">
-          <div class="flex flex-col lg:flex-row justify-around items-center lg:items-start gap-10 lg:gap-0">
+        <div class="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
 
-            <!-- Image & Controls -->
-            <div class="flex justify-center items-center relative">
-              <img src="src/assets/oil.jpg" alt="image" class="rounded-[13px] lg:w-100 carrossel-origem">
+          <div class="w-96 h-auto lg:w-1/2 mb-3 lg:mb-0 rounded-3xl overflow-hidden relative">
+            <img src="src/assets/oil.jpg" alt="oil" class="w-full">
 
-              <!-- Controls Overlay -->
-              <div class="absolute items-center w-full lg:w-[400px] overflow-hidden">
-                <div
-                  class="bg-black cursor-pointer h-[50px] w-[80px] lg:h-[65px] lg:w-[120px] rounded-[18px] opacity-65 flex justify-end px-2 items-center relative top-1/2 right-0 -translate-y-1/2">
-                  <svg width="40px" height="40px" lg:width="64px" lg:height="64px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-                        fill="#FFFFFF"></path>
-                    </g>
-                  </svg>
-                </div>
+                        <button
+              class="absolute bg-black opacity-75 rounded-[18px] lg:rounded-[24px] shadow-lg shadow-black w-[70px] h-[55px] lg:w-[100px] lg:h-[70px] top-1/2 flex items-center justify-end -translate-y-1/2 -left-[24px] cursor-pointer">
+              <svg class="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px]" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                    fill="#FFFFFF"></path>
+                </g>
+              </svg>
+            </button>
 
-                <div
-                  class="bg-black cursor-pointer h-[50px] w-[80px] lg:h-[65px] lg:w-[120px] rounded-[18px] opacity-65 flex justify-start px-2 items-center relative top-1/2 left-0 -translate-y-1/2">
-                  <svg width="40px" height="40px" lg:width="64px" lg:height="64px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-                        fill="#FFFFFF"></path>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <button
+              class="absolute bg-black opacity-75 rounded-[18px] lg:rounded-[24px] shadow-lg shadow-black w-[70px] h-[55px] lg:w-[100px] lg:h-[70px] top-1/2 flex items-center justify-start -translate-y-1/2 -right-[24px] cursor-pointer">
+              <svg class="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px] absolute rotate-180" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                    fill="#FFFFFF"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
 
-            <!-- Content -->
-            <div>
-              <div class="flex flex-col items-center lg:block">
-                <div class="mb-3 w-full">
-                  <h1 class="text-3xl lg:text-[42px] text-[#8BCE95] text-center lg:text-right -mb-[8px] lg:mr-2">
-                    PROBLEMA
-                  </h1>
-                </div>
+          <div>
+            <h1 class="lg:text-[40px] mb-1 lg:mb-0 text-[30px] tracking-widest font-anta text-center lg:text-right text-white text-shadow-[0_4px_8px_rgb(255_255_255)]/50">PROBLEMA</h1>
 
-                <p
-                  class="text-justify max-w-full lg:max-w-100 text-base lg:text-[20px] text-[#D2FAD8] relative lg:-translate-x-2 leading-tight px-2 lg:px-0">
-                  A poluição representa um dos maiores desafios ambientais da nossa era, afetando a saúde humana, a
+            <p class="lg:max-w-[440px] lg:text-[16px] text-justify text-sm text-white mb-3 lg:mb-0">
+              A poluição representa um dos maiores desafios ambientais da nossa era, afetando a saúde humana, a
                   biodiversidade e o equilíbrio dos ecossistemas. Trata-se da degradação da qualidade ambiental
                   resultante de atividades que, direta ou indiretamente, prejudicam a saúde, a segurança e o bem-estar
                   da população, criam condições adversas às atividades sociais e econômicas e afetam desfavoravelmente a
                   biota. Este site tem como objetivo explorar as causas profundas desse problema, suas vastas
                   consequências para o planeta e para a vida. Compreender a complexidade da poluição é o primeiro passo
                   para a construção de um futuro mais sustentável e saudável para todos.
-
-                </p>
-              </div>
-
-              <!-- Decorative Lines (Hidden on Mobile) -->
-              <div class="relative -right-16 -top-[333px] hidden lg:block">
-                <hr class="border-[#8BCE95] border-[1px] w-70 static translate-x-14">
-                <hr class="border-[#8BCE95] border-[1px] w-45 static rotate-90 translate-x-[247px] translate-y-10">
-              </div>
-            </div>
+            </p>
           </div>
+
         </div>
+
       </section>
 
       <hr class="border-[#141CFF] border-4 elementsDivider">
@@ -215,7 +195,8 @@
 
         <!-- Text Block -->
         <div class="flex justify-center flex-col items-center mb-10 lg:mb-20 mt-10 lg:mt-50">
-          <h1 class="text-3xl lg:text-5xl font-light mb-2 text-[#141CFF] colorText text-center" id="pollution">POLUIÇÃO:
+          <h1 class="text-3xl lg:text-5xl font-light mb-2 text-[#141CFF] colorText text-center font-anta"
+            id="pollution">POLUIÇÃO:
             ÁGUA</h1>
           <hr class="border-2 w-60 lg:w-120 border-[#0700e0] mb-6 lg:mb-10 colorLine">
           <p
@@ -233,7 +214,7 @@
 
           <!-- Decorative Lines (Hidden on Mobile) -->
           <div class="absolute hidden lg:block">
-            <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]">
+            <!-- <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]">
             <hr
               class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270">
           </div>
@@ -241,7 +222,7 @@
           <div class="absolute rotate-180 translate-y-[445px] hidden lg:block">
             <hr class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[360px] -translate-y-[15px]">
             <hr
-              class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270">
+              class="border-2 w-[46px] absolute border-[#0700e0] colorLine -translate-x-[383px] translate-y-[6px] rotate-270"> -->
           </div>
         </div>
 
@@ -253,13 +234,14 @@
 
           <div class="flex flex-col static lg:translate-y-13 items-center lg:items-end">
             <div class="mb-3 relative w-full lg:w-auto text-center lg:text-right">
-              <h1 class="text-3xl lg:text-[40px] text-[#141CFF] colorText lg:-mb-[8px] lg:mr-2">CONSEQUÊNCIA</h1>
+              <h1 class="text-3xl lg:text-[40px] text-[#141CFF] colorText lg:-mb-[8px] lg:mr-2 font-anta">CONSEQUÊNCIA
+              </h1>
 
-              <div class="hidden lg:block">
+              <!-- <div class="hidden lg:block">
                 <hr class="border-[#0700e0] colorLine border-[1px] w-70 absolute translate-x-14">
                 <hr
                   class="border-[#0700e0] colorLine border-[1px] w-45 absolute rotate-90 translate-x-[247px] translate-y-10">
-              </div>
+              </div> -->
             </div>
 
             <p
@@ -343,11 +325,11 @@
                 class="text-white font-light tracking-wide text-xl lg:text-[25px] mb-6 lg:mb-16 leading-tight relative">
                 <div class="text-center lg:text-right">Nos siga em:</div>
                 <hr
-                  class="border-1 border-[#b7bdc3] w-[185px] absolute rotate-90 translate-x-[90px] translate-y-16 hidden lg:block">
+                  class="border-1 border-[#b7bdc3] w-[185px] absolute rotate-90 translate-x-[120px] translate-y-16 hidden lg:block">
               </div>
 
               <div
-                class="flex mt-4 lg:mt-26 justify-center gap-6 lg:gap-0 lg:justify-between relative lg:-translate-x-16 w-full lg:w-[250px]">
+                class="flex mt-4 lg:mt-26 justify-center gap-6 lg:gap-0 lg:justify-between relative lg:-translate-x-6 lg:-translate-y-20 w-full lg:w-[250px]">
                 <a href="https://github.com/BernardoPaiva412/nexus-ambiental"><img src="src/assets/github.png"
                     alt="github" class="h-10 lg:h-13"></a>
                 <a href="https://www.instagram.com/"><img src="src/assets/instagram.png" alt="instagram"
