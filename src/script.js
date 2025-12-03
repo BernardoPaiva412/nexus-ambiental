@@ -17,9 +17,9 @@ const consequenceGraphic = document.querySelector(".consequence-graphic")
 const consequenceImage = document.querySelector(".consequence-image")
 
 // Definição das classes das imagens para facilitar a troca
-const bgWaterClass = "bg-[url('src/assets/polluted-water.jpg')]"
-const bgLandClass = "bg-[url('src/assets/polluted-land.jpg')]"
-const bgAirClass = "bg-[url('src/assets/polluted-air.jpg')]"
+const bgWaterClass = "bg-[url('src/assets/dirty-bgs/polluted-water.jpg')]"
+const bgLandClass = "bg-[url('src/assets/dirty-bgs/polluted-land.jpg')]"
+const bgAirClass = "bg-[url('src/assets/dirty-bgs/polluted-air.jpg')]"
 
 btnOcean.addEventListener('click', () => {
     //water shadow hex #0700e0
@@ -38,8 +38,8 @@ btnOcean.addEventListener('click', () => {
     pollution.textContent = "POLUIÇÃO: ÁGUA"
     pollutionText1.textContent = "A poluição da água é definida como qualquer alteração nas suas características físicas, químicas ou biológicas que comprometa a sua qualidade e potabilidade. Este é um dos impactos ambientais mais críticos, resultando principalmente da ação humana."
     pollutionText2.textContent = "As consequências da poluição da água são severas e afetam diretamente a saúde humana e os ecossistemas: •Saúde Humana: Proliferação de doenças de veiculação hídrica, como hepatite, cólera e leptospirose, além da perda de acesso à água potável. •Meio Ambiente: Diminuição da biodiversidade aquática, contaminação de lençóis freáticos e outros mananciais, e acentuação do processo de eutrofização dos corpos hídricos, que leva à morte de ecossistemas aquáticos."
-    consequenceGraphic.src = "src/assets/graphic1.jpg" //muda o gráfico
-    consequenceImage.src = "src/assets/pelican.jpg" //muda a imagem
+    consequenceGraphic.src = "src/assets/graphics/graphic1.jpg" //muda o gráfico
+    consequenceImage.src = "src/assets/consequences/pelican.jpg" //muda a imagem
     
     //texto azul: #141cff
     //acentos azuis: #0700e0
@@ -91,8 +91,8 @@ btnLand.addEventListener('click', () => {
     pollution.textContent = "POLUIÇÃO: TERRA"
     pollutionText1.textContent = "A poluição do solo é qualquer alteração em sua natureza e em suas propriedades físicas, químicas ou biológicas, causada pelo contato com produtos químicos e resíduos, que o deterioram e podem torná-lo infértil."
     pollutionText2.textContent = "Causa a contaminação da cadeia alimentar, podendo levar a disfunções hepáticas, renais, problemas no sistema nervoso e até mesmo câncer; provoca a perda de fertilidade do solo, a contaminação de lençóis freáticos e a redução da biodiversidade; Prejudica a agricultura, inviabiliza projetos de construção e desvaloriza terrenos, além de poder danificar infraestruturas."
-    consequenceGraphic.src = "src/assets/graphic2.png" //muda o gráfico
-    consequenceImage.src = "src/assets/poverty.jpg" //muda a imagem
+    consequenceGraphic.src = "src/assets/graphics/graphic2.png" //muda o gráfico
+    consequenceImage.src = "src/assets/consequences/poverty.jpg" //muda a imagem
     
     //texto verde: #00f968
     //acentos verdes: #14ca66
@@ -145,8 +145,8 @@ btnAir.addEventListener('click', () => {
     pollution.textContent = "POLUIÇÃO: AR"
     pollutionText1.textContent = "A poluição do ar, também conhecida como poluição atmosférica, é caracterizada pela alteração das propriedades naturais da atmosfera devido à emissão de substâncias como gases, materiais particulados e agentes biológicos. Este fenômeno é uma preocupação global, com impactos significativos na saúde pública e no meio ambiente."
     pollutionText2.textContent = "As consequências da poluição do ar são abrangentes e afetam a saúde humana, o meio ambiente e o clima global: Saúde Humana: Causa problemas respiratórios (asma, bronquite), irritações nos olhos, nariz e garganta, e agrava doenças preexistentes. Meio Ambiente: Provoca chuva ácida, que danifica solos, vegetação e corpos d'água. Intensifica o fenômeno da inversão térmica e afeta a biodiversidade. Clima Global: Contribui para o aquecimento global, intensificando o efeito estufa e acelerando as mudanças climáticas."
-    consequenceGraphic.src = "src/assets/graphic3.png" //muda o gráfico
-    consequenceImage.src = "src/assets/global-warming.jpg" //muda a imagem
+    consequenceGraphic.src = "src/assets/graphics/graphic3.png" //muda o gráfico
+    consequenceImage.src = "src/assets/consequences/global-warming.jpg" //muda a imagem
     
     //texto amarelo: #fedb4f
     //acentos amarelos: #E09304
