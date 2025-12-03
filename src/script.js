@@ -22,10 +22,10 @@ const bgLandClass = "bg-[url('src/assets/polluted-land.jpg')]"
 const bgAirClass = "bg-[url('src/assets/polluted-air.jpg')]"
 
 btnOcean.addEventListener('click', () => {
-    //water shadow hex #0700e0
+    //water shadow hex #1441cc
     btnOcean.classList.replace("mb-4", "mt-6")
-    btnOcean.classList.replace("bg-[#67749D]", "bg-[#141CFF]")
-    btnOcean.classList.replace("shadow-[0px_8px_rgba(66,75,103,1)]", "shadow-[0px_8px_rgba(6_0_184)]")
+    btnOcean.classList.replace("bg-[#67749D]", "bg-[#1050ff]")
+    btnOcean.classList.replace("shadow-[0px_8px_rgba(66,75,103,1)]", "shadow-[0px_8px_rgba(20_65_204)]")
     waveIcon.setAttribute("stroke", "#0600b8")
     btnLand.classList.replace("mt-6", "mb-4")
     btnLand.classList.replace("bg-[#00F968]", "bg-[#6D9770]")
@@ -41,21 +41,21 @@ btnOcean.addEventListener('click', () => {
     consequenceGraphic.src = "src/assets/graphic1.jpg" //muda o gráfico
     consequenceImage.src = "src/assets/pelican.jpg" //muda a imagem
     
-    //texto azul: #141cff
-    //acentos azuis: #0700e0
+    //texto azul: #1050ff
+    //acentos azuis: #1441cc
 
     // VERIFICA SE ESTAVA NA TERRA (GREEN)
     if (sectionPeso.classList.contains(bgLandClass) === true) {
         sectionPeso.classList.replace(bgLandClass, bgWaterClass) // Troca imagem
         
         colorLines.forEach(line => {
-            line.classList.replace("border-[#14ca66]", "border-[#0700e0]")
+            line.classList.replace("border-[#14ca66]", "border-[#1441cc]")
         })
         colorTexts.forEach(text => {
-            text.classList.replace("text-[#00F968]", "text-[#141CFF]")
+            text.classList.replace("text-[#00F968]", "text-[#1050ff]")
         })
         dividers.forEach(divider => {
-            divider.classList.replace("border-[#00F968]", "border-[#141CFF]")
+            divider.classList.replace("border-[#00F968]", "border-[#1050ff]")
         })
     }
     
@@ -64,13 +64,13 @@ btnOcean.addEventListener('click', () => {
         sectionPeso.classList.replace(bgAirClass, bgWaterClass) // Troca imagem
 
         colorLines.forEach(line => {
-            line.classList.replace("border-[#E0AE04]", "border-[#0700e0]")
+            line.classList.replace("border-[#E0AE04]", "border-[#1441cc]")
         })
         colorTexts.forEach(text => {
-            text.classList.replace("text-[#fedb4f]", "text-[#141CFF]")
+            text.classList.replace("text-[#fedb4f]", "text-[#1050ff]")
         })
         dividers.forEach(divider => {
-            divider.classList.replace("border-[#fedb4f]", "border-[#141CFF]")
+            divider.classList.replace("border-[#fedb4f]", "border-[#1050ff]")
         })
     }
 })
@@ -81,8 +81,8 @@ btnLand.addEventListener('click', () => {
     btnLand.classList.replace("shadow-[0px_8px_rgba(74,107,77,1)]", "shadow-[0px_8px_rgba(20_202_102)]")
     sproutIcon.setAttribute("fill", "#14ca66")
     btnOcean.classList.replace("mt-6", "mb-4")
-    btnOcean.classList.replace("bg-[#141CFF]", "bg-[#67749D]")
-    btnOcean.classList.replace("shadow-[0px_8px_rgba(6_0_184)]", "shadow-[0px_8px_rgba(66,75,103,1)]")
+    btnOcean.classList.replace("bg-[#1050ff]", "bg-[#67749D]")
+    btnOcean.classList.replace("shadow-[0px_8px_rgba(20_65_204)]", "shadow-[0px_8px_rgba(66,75,103,1)]")
     waveIcon.setAttribute("stroke", "#424b67")
     btnAir.classList.replace("mt-6", "mb-4")
     btnAir.classList.replace("bg-[#fedb4f]", "bg-[#CFC874]")
@@ -103,13 +103,13 @@ btnLand.addEventListener('click', () => {
         sectionPeso.classList.replace(bgWaterClass, bgLandClass) // Troca imagem
         
         colorLines.forEach(line => {
-            line.classList.replace("border-[#0700e0]", "border-[#14ca66]")
+            line.classList.replace("border-[#1441cc]", "border-[#14ca66]")
         })
         colorTexts.forEach(text => {
-            text.classList.replace("text-[#141CFF]", "text-[#00F968]")
+            text.classList.replace("text-[#1050ff]", "text-[#00F968]")
         })
         dividers.forEach(divider => {
-            divider.classList.replace("border-[#141CFF]", "border-[#00F968]")
+            divider.classList.replace("border-[#1050ff]", "border-[#00F968]")
         })
     }
     
@@ -139,8 +139,8 @@ btnAir.addEventListener('click', () => {
     btnLand.classList.replace("shadow-[0px_8px_rgba(20_202_102)]", "shadow-[0px_8px_rgba(74,107,77,1)]")
     sproutIcon.setAttribute("fill", "#4a6b4d")
     btnOcean.classList.replace("mt-6", "mb-4")
-    btnOcean.classList.replace("bg-[#141CFF]", "bg-[#67749D]")
-    btnOcean.classList.replace("shadow-[0px_8px_rgba(6_0_184)]", "shadow-[0px_8px_rgba(66,75,103,1)]")
+    btnOcean.classList.replace("bg-[#1050ff]", "bg-[#67749D]")
+    btnOcean.classList.replace("shadow-[0px_8px_rgba(20_65_204)]", "shadow-[0px_8px_rgba(66,75,103,1)]")
     waveIcon.setAttribute("stroke", "#424b67")
     pollution.textContent = "POLUIÇÃO: AR"
     pollutionText1.textContent = "A poluição do ar, também conhecida como poluição atmosférica, é caracterizada pela alteração das propriedades naturais da atmosfera devido à emissão de substâncias como gases, materiais particulados e agentes biológicos. Este fenômeno é uma preocupação global, com impactos significativos na saúde pública e no meio ambiente."
@@ -156,13 +156,13 @@ btnAir.addEventListener('click', () => {
         sectionPeso.classList.replace(bgWaterClass, bgAirClass) // Troca imagem
         
         colorLines.forEach(line => {
-            line.classList.replace("border-[#0700e0]", "border-[#E0AE04]")
+            line.classList.replace("border-[#1441cc]", "border-[#E0AE04]")
         });
         colorTexts.forEach(text => {
-            text.classList.replace("text-[#141CFF]", "text-[#fedb4f]")
+            text.classList.replace("text-[#1050ff]", "text-[#fedb4f]")
         })
         dividers.forEach(divider => {
-            divider.classList.replace("border-[#141CFF]", "border-[#fedb4f]")
+            divider.classList.replace("border-[#1050ff]", "border-[#fedb4f]")
         })
     }
 
