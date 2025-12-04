@@ -131,24 +131,46 @@
     }
 }
 
+@keyframes ambiental-animation {
+    0% {
+        color: #15531e
+    }
+
+    33.333% {
+        color: #4cceee;
+    }
+
+    66.666% {
+        color: #f0f062;
+    }
+
+    100% {
+        color: #15531e
+    }
+}
+
 .nexus {
-    animation: nexus-animation 10s infinite normal ease-in-out;
+    animation: nexus-animation 21s infinite normal ease-in-out;
+}
+
+.ambiental {
+    animation: ambiental-animation 21s infinite normal ease-in-out
 }
 
 .origin-background {
-    animation: background-color-animation 10s infinite normal ease-in-out;
+    animation: background-color-animation 21s infinite normal ease-in-out;
 }
 
 .fade-transition {
-    animation: transition-gradient-animation 10s infinite normal ease-in-out;
+    animation: transition-gradient-animation 21s infinite normal ease-in-out;
 }
 
 .img1 {
-    animation: img1Trans 10s infinite normal ease-in-out;
+    animation: img1Trans 21s infinite normal ease-in-out;
 }
 .img2 {
-    animation: img2Trans 10s infinite normal ease-in-out;
+    animation: img2Trans 21s infinite normal ease-in-out;
 }
 .img3 {
-    animation: img3Trans 10s infinite normal ease-in-out;
+    animation: img3Trans 21s infinite normal ease-in-out;
 }
