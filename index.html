@@ -47,12 +47,17 @@
 
         <!-- Header -->
         <header
-          class="font-anta flex w-full h-auto backdrop-blur-[37px] px-7 py-3 justify-center items-center fixed z-100">
-          <div class=" w-full flex lg:ml-auto gap-6 lg:gap-30 justify-around items-center header-text">
-            <a href="#inicio" class="text-xl text-white hover:text-[#cdf187] transition-colors text-center">INÍCIO</a>
-            <a href="#origem" class="text-xl text-white hover:text-[#cdf187] transition-colors text-center">ORIGEM</a>
-            <a href="#crise" class="text-xl text-white hover:text-[#cdf187] transition-colors text-center">CRISE</a>
-            <a href="#chamado" class="text-xl text-white hover:text-[#cdf187] transition-colors text-center">CHAMADO</a>
+          class="font-anta flex w-full h-auto backdrop-blur-[37px] px-3 lg:px-0 py-3 justify-center items-center fixed z-100">
+          <div
+            class=" w-full flex lg:ml-auto gap-6 lg:gap-30 justify-between lg:justify-evenly items-center header-text">
+            <a href="#inicio"
+              class="lg:text-xl text-white hover:text-[#cdf187] transition-colors text-center">INÍCIO</a>
+            <a href="#origem"
+              class="lg:text-xl text-white hover:text-[#cdf187] transition-colors text-center">ORIGEM</a>
+            <a href="#crise" class="lg:text-xl text-white hover:text-[#cdf187] transition-colors text-center">CRISE</a>
+            <a href="#chamado"
+              class="lg:text-xl text-white hover:text-[#cdf187] transition-colors text-center">CHAMADO</a>
+            <a href="#nexus" class="lg:text-xl text-white hover:text-[#cdf187] transition-colors text-center">NEXUS</a>
           </div>
         </header>
 
@@ -76,58 +81,66 @@
       <div class="absolute w-full h-[250px] -translate-y-[250px] fade-transition hidden lg:block"></div>
     </div>
     <!-- ORIGEM SECTION -->
-    <section id="origem" class="h-screen origin-background">
+    <!-- ORIGEM SECTION - COM CARROSSEL FUNCIONAL -->
+    <section id="origem" class="h-screen origin-background px-4 lg:px-0 flex items-center">
 
-      <div class="flex flex-col lg:flex-row justify-around items-center h-full">
+      <div class="container mx-auto flex flex-col lg:flex-row justify-around items-center gap-8 lg:gap-12">
 
-        <div class="max-w-full h-auto lg:w-1/2 mb-3 lg:mb-0 rounded-3xl overflow-hidden relative">
-          <img src="src/assets/origem/oil.jpg" alt="oil" class="full">
+        <!-- Container do Carrossel de Imagens -->
+        <div id="image-carousel"
+          class="w-full max-w-2xl lg:w-1/2 aspect-video rounded-3xl overflow-hidden relative shadow-xl">
+          <!-- O "trilho" que contém todas as imagens e se move -->
+          <div id="slider-track" class="flex h-full transition-transform duration-500 ease-in-out">
+            <!-- Slide 1 -->
+            <img src="src/assets/origem/oil.jpg" alt="Vazamento de petróleo no oceano"
+              class="w-full h-full object-cover flex-shrink-0">
+            <!-- Slide 2 -->
+            <img src="src/assets/origem/trash.jpg" alt="Lixo descartado irregularmente em um corpo d'água"
+              class="w-full h-full object-cover flex-shrink-0">
+            <!-- Slide 3 -->
+            <img src="src/assets/origem/agriculture.png"
+              alt="Campo agrícola com trator, representando o uso de agrotóxicos"
+              class="w-full h-full object-cover flex-shrink-0">
+            <!-- Slide 4 -->
+            <img src="src/assets/origem/transit.jpg" alt="Trânsito intenso emitindo fumaça em uma cidade"
+              class="w-full h-full object-cover flex-shrink-0">
+            <!-- Slide 5 -->
+            <img src="src/assets/origem/burned.jpeg" alt="Área florestal após uma queimada"
+              class="w-full h-full object-cover flex-shrink-0">
+          </div>
 
-          <button
-            class="absolute bg-black opacity-75 rounded-[18px] lg:rounded-[24px] shadow-lg shadow-black w-[70px] h-[55px] lg:w-[100px] lg:h-[70px] top-1/2 flex items-center justify-end -translate-y-1/2 -left-[24px] cursor-pointer">
-            <svg class="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px]" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-                  fill="#FFFFFF"></path>
-              </g>
+          <!-- Botão Anterior -->
+          <button id="prev-button"
+            class="absolute z-10 bg-black/50 hover:bg-black/75 transition-colors opacity-75 rounded-r-2xl shadow-lg w-12 h-16 sm:w-16 sm:h-20 top-1/2 flex items-center justify-center -translate-y-1/2 left-0 cursor-pointer">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
 
-          <button
-            class="absolute bg-black opacity-75 rounded-[18px] lg:rounded-[24px] shadow-lg shadow-black w-[70px] h-[55px] lg:w-[100px] lg:h-[70px] top-1/2 flex items-center justify-start -translate-y-1/2 -right-[24px] cursor-pointer">
-            <svg class="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px] absolute rotate-180" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-                  fill="#FFFFFF"></path>
-              </g>
+          <!-- Botão Próximo -->
+          <button id="next-button"
+            class="absolute z-10 bg-black/50 hover:bg-black/75 transition-colors opacity-75 rounded-l-2xl shadow-lg w-12 h-16 sm:w-16 sm:h-20 top-1/2 flex items-center justify-center -translate-y-1/2 right-0 cursor-pointer">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
         </div>
 
-        <div>
-          <h1
-            class="lg:text-4xl mb-1 lg:mb-0 text-[30px] tracking-widest font-anta text-center lg:text-right text-white text-shadow-[0_4px_8px_rgb(255_255_255)]/50">
-            PROBLEMA</h1>
-
-          <p class="lg:max-w-[440px] lg:text-lg text-justify text-sm text-white mb-3 lg:mb-0">
-            A poluição representa um dos maiores desafios ambientais da nossa era, afetando a saúde humana, a
-            biodiversidade e o equilíbrio dos ecossistemas. Trata-se da degradação da qualidade ambiental
-            resultante de atividades que, direta ou indiretamente, prejudicam a saúde, a segurança e o bem-estar
-            da população, criam condições adversas às atividades sociais e econômicas e afetam desfavoravelmente a
-            biota. Este site tem como objetivo explorar as causas profundas desse problema, suas vastas
-            consequências para o planeta e para a vida. Compreender a complexidade da poluição é o primeiro passo
-            para a construção de um futuro mais sustentável e saudável para todos.
+        <!-- Container do Texto (sem alterações de conteúdo) -->
+        <div class="lg:max-w-md">
+          <h2
+            class="text-3xl lg:text-4xl tracking-widest font-anta text-center lg:text-right text-white text-shadow-[0_4px_8px_rgba(255,255,255,0.5)] mb-4">
+            AS MÚLTIPLAS ORIGENS
+          </h2>
+          <p class="text-justify text-base lg:text-lg text-white">
+            A poluição representa um dos maiores desafios ambientais da nossa era. Suas causas são diversas, indo desde
+            a queima de combustíveis fósseis e o descarte industrial até práticas agrícolas insustentáveis e o lixo
+            doméstico. Compreender a complexidade dessas origens é o primeiro passo para desenvolvermos soluções
+            eficazes e construirmos um futuro mais sustentável para todos.
           </p>
         </div>
-
       </div>
 
     </section>
@@ -200,7 +213,7 @@
         </button>
       </div>
 
-      <div class="h-screen pt-27 flex justify-around items-center">
+      <div class="h-screen pt-27 flex justify-around items-center flex-col lg:flex-row px-3 lg:p-0">
         <!-- Text Block -->
         <div class="flex justify-between flex-col items-center h-48">
           <div>
@@ -238,7 +251,7 @@
       </div>
 
       <!-- Consequence Block -->
-      <div class="flex flex-col lg:flex-row justify-around gap-8 lg:gap-0 h-screen">
+      <div class="flex flex-col-reverse lg:flex-row justify-around gap-8 lg:gap-0 h-screen px-3 lg:px-0">
         <div class="flex justify-center items-center overflow-hidden">
           <img src="src/assets/consequences/pelican.jpg" alt="image"
             class="rounded-2xl w-full max-w-[400px] consequence-image">
@@ -271,91 +284,267 @@
 
     <hr class="border-[#141CFF] border-4 elementsDivider">
 
-    <!-- AJUDAR SECTION -->
-    <section id="chamado" class="bg-[#4f4e4e] h-auto lg:h-[650px] pb-10 lg:pb-0">
-      <div class="flex justify-center flex-col items-center mb-10 lg:mb-20">
-        <h1 class="text-2xl lg:text-3xl font-light mb-1 text-[#d6dade] mt-10 lg:mt-16">seu</h1>
-        <hr class="border-2 w-60 lg:w-120 border-[#b7bdc3]">
-        <h1 class="text-4xl lg:text-5xl font-light text-[#d6dade]">CHAMADO</h1>
-      </div>
-
-      <div
-        class="w-full h-auto lg:h-[500px] border-t-3 border-b-3 border-[#b7bdc3] relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 overflow-hidden mb-10 flex flex-col lg:block">
-
-        <!-- Overlay (Visible on Desktop) -->
-        <div
-          class="absolute w-full h-full bg-linear-to-r from-black from-10% via-transparent to-black to-90% opacity-60 z-10 pointer-events-none hidden lg:block">
+    <!-- CHAMADO À AÇÃO SECTION - REFATORADA COM CONTEÚDO MOBILE VISÍVEL -->
+    <section id="chamado" class="bg-[#2d2d2d] py-16 sm:py-20">
+      <div class="container mx-auto px-6">
+        <!-- Bloco de Título -->
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-base font-nsm uppercase tracking-widest text-[#b7bdc3]">O Futuro é uma Escolha</h2>
+          <p class="mt-2 font-anta text-4xl sm:text-5xl lg:text-6xl text-white">Seu Chamado à Ação</p>
+          <p class="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-gray-300">
+            Combater a poluição exige uma abordagem multifacetada. Abaixo estão as frentes de batalha essenciais onde
+            indivíduos, governos e indústrias podem fazer a diferença.
+          </p>
         </div>
-        <div class="absolute w-full h-full bg-black opacity-15 hidden lg:block"></div>
 
-        <!-- Images Container -->
-        <div class="flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center items-center">
+        <!-- Container Principal (Grid Responsivo) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          <!-- Text Overlay Card -->
-          <div class="relative lg:absolute flex flex-col justify-center items-center text-center z-20 py-10 lg:py-0">
-            <div class="mt-0 lg:mt-8 text-white mb-4 lg:mb-45">
-              <div class="text-lg">Transporte</div>
-              <div class="font-bold text-3xl -mt-2 tracking-wide">SUSTENTÁVEL</div>
-            </div>
-            <div class="max-w-[350px] lg:max-w-[600px] text-white px-4 lg:px-0">
-
+          <!-- CARD 1: Energia & Mobilidade -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="src/assets/aids/renewable-energy.jpg" alt="Painéis solares e turbinas eólicas"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative flex flex-col justify-end p-6 sm:p-8 text-white min-h-[300px] lg:min-h-0">
+              <h3 class="font-anta text-2xl sm:text-3xl font-bold">Energia & Mobilidade</h3>
+              <!-- ### ALTERAÇÃO PRINCIPAL AQUI ### -->
+              <p class="mt-2 text-sm sm:text-base text-gray-200 leading-relaxed
+                     transition-all duration-1000 ease-in-out
+                     lg:opacity-0 lg:max-h-0 lg:group-hover:opacity-100 lg:group-hover:max-h-screen">
+                A transição para fontes renováveis (solar, eólica) e o incentivo ao transporte público, veículos
+                elétricos e bicicletas são cruciais para reduzir as emissões atmosféricas e nossa dependência de
+                combustíveis fósseis.
+              </p>
             </div>
           </div>
-          <img src="src/assets/aids/sustainable-transport.jpg"
-            class="w-full lg:w-auto h-[250px] lg:h-auto object-cover">
+
+          <!-- CARD 2: Gestão de Resíduos e Saneamento -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="src/assets/aids/recycling.webp" alt="Símbolo de reciclagem em uma pilha de garrafas plásticas"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative flex flex-col justify-end p-6 sm:p-8 text-white min-h-[300px] lg:min-h-0">
+              <h3 class="font-anta text-2xl sm:text-3xl font-bold">Consumo & Descarte</h3>
+              <!-- ### ALTERAÇÃO PRINCIPAL AQUI ### -->
+              <p class="mt-2 text-sm sm:text-base text-gray-200 leading-relaxed
+                     transition-all duration-1000 ease-in-out
+                     lg:opacity-0 lg:max-h-0 lg:group-hover:opacity-100 lg:group-hover:max-h-screen">
+                A implementação universal do saneamento básico, coleta seletiva e reciclagem é fundamental. Tratar o
+                esgoto e destinar o lixo corretamente evita a contaminação massiva de nossos rios, solos e oceanos.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 3: Mobilidade Sustentável -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="src/assets/aids/sustainable-transport.jpg" alt="Veículo futurista em uma cidade verde"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative flex flex-col justify-end p-6 sm:p-8 text-white min-h-[300px] lg:min-h-0">
+              <h3 class="font-anta text-2xl sm:text-3xl font-bold">Mobilidade Sustentável</h3>
+              <!-- ### ALTERAÇÃO PRINCIPAL AQUI ### -->
+              <p class="mt-2 text-sm sm:text-base text-gray-200 leading-relaxed
+                     transition-all duration-1000 ease-in-out
+                     lg:opacity-0 lg:max-h-0 lg:group-hover:opacity-100 lg:group-hover:max-h-screen">
+                Adoção massiva de transporte público eficiente, veículos elétricos e ciclovias. Reduzir a frota de
+                veículos a combustão é um passo fundamental para limpar o ar de nossas cidades e diminuir a emissão de
+                gases de efeito estufa.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="w-full h-auto lg:h-[450px] bg-[#4f4e4e] -z-1 relative pb-10 lg:pb-0">
-      <div>
-        <div class="absolute w-full h-full lg:h-[450px] bg-radial from-[#b7bdc3] to-transparent to-60% opacity-35 z-1">
-        </div>
+    <!-- SOBRE NÓS E PARCEIROS SECTION - REFATORADA E RESPONSIVA -->
+    <section id="nexus" class="w-full bg-[#1a1a1a] relative py-16 sm:py-20 overflow-hidden">
 
-        <hr class="mx-auto border-2 border-[#b7bdc3] w-[90%] lg:w-[800px] mb-10 lg:mb-40 pt-10 lg:pt-0 block">
-
+      <!-- Elementos Decorativos de Fundo -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div
-          class="flex flex-col lg:flex-row justify-around relative z-2 items-center lg:items-start text-center lg:text-left gap-10 lg:gap-0">
-          <div class="flex flex-col items-center lg:items-start">
+          class="absolute -top-10 -left-10 w-64 h-64 sm:w-96 sm:h-96 bg-[#14ca66] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse">
+        </div>
+        <div
+          class="absolute -bottom-10 -right-10 w-64 h-64 sm:w-96 sm:h-96 bg-[#141CFF] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse">
+        </div>
+      </div>
+
+      <div class="relative z-10 container mx-auto px-6">
+
+        <!-- TEXT BLOCK - Bloco "A Nexus" -->
+        <div class="mb-16 sm:mb-24">
+          <div class="flex flex-col items-center text-center">
+            <h2 class="text-4xl lg:text-6xl font-anta text-white mb-2">A NEXUS</h2>
+            <p class="text-xl lg:text-2xl font-nsm text-[#b7bdc3] mb-10 tracking-widest uppercase">Conectando Propósitos
+            </p>
+
+            <!-- Box "Tech" responsivo -->
             <div
-              class="max-w-[305px] text-white font-light tracking-wide text-lg lg:text-[23px] mb-6 lg:mb-16 leading-tight">
-              Registre-se e receba e-mails com atualizações de nosso site.
-            </div>
-            <div>
-              <div class="text-xl lg:text-3xl font-light mb-1 ml-0 lg:ml-3 text-[#d6dade]">Endereço de e-mail</div>
-              <hr class="border-1 border-[#b7bdc3] w-[300px] lg:w-[400px] mx-auto lg:mx-0">
-              <div class="text-base lg:text-xl font-light mb-1 ml-0 lg:ml-3 text-[#d6dade] mt-1">
-                nexusambiental@gmail.com
+              class="relative bg-[#2a2a2a]/80 backdrop-blur-sm border border-[#b7bdc3]/30 rounded-3xl p-6 md:p-8 lg:p-12 max-w-4xl shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+              <!-- Cantos Decorativos -->
+              <div class="absolute -top-px -left-px w-4 h-4 border-t-2 border-l-2 border-[#14ca66] rounded-tl-3xl">
+              </div>
+              <div class="absolute -bottom-px -right-px w-4 h-4 border-b-2 border-r-2 border-[#141CFF] rounded-br-3xl">
+              </div>
+              <div
+                class="text-white font-nsm text-justify sm:text-center text-sm md:text-base lg:text-lg leading-relaxed space-y-4">
+                <p>A Nexus Ambiental nasceu de uma constatação crítica: a salvação do planeta não sofre de falta de
+                  heróis, mas de falta de conexão.</p>
+                <p>Operamos sob a filosofia da <span class="text-[#14ca66] font-bold">Tríade Vital</span> (Água, Terra e
+                  Ar). Não plantamos as árvores nem limpamos os oceanos diretamente; nós somos o megafone, o farol e o
+                  escudo financeiro para aqueles que o fazem.</p>
+                <p>Nossa missão é combater a apatia e a desinformação, conectando a sociedade civil às linhas de frente
+                  da preservação, transformando ações isoladas em um movimento global coordenado e imparável.</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="flex flex-col items-center lg:items-end">
-            <div
-              class="text-white font-light tracking-wide text-xl lg:text-[25px] mb-6 lg:mb-16 leading-tight relative">
-              <div class="text-center lg:text-right">Nos siga em:</div>
-              <hr
-                class="border-1 border-[#b7bdc3] w-[185px] absolute rotate-90 translate-x-[120px] translate-y-16 hidden lg:block">
-            </div>
+        <!-- CARROSSEL DE PARCEIROS REFATORADO -->
+        <div class="w-full">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl lg:text-4xl font-anta text-white">NOSSOS PARCEIROS</h3>
+            <p class="text-base text-[#b7bdc3] mt-2 font-nsm max-w-2xl mx-auto">Organizações na linha de frente que
+              apoiamos e amplificamos.</p>
+          </div>
 
-            <div
-              class="flex mt-4 lg:mt-26 justify-center gap-6 lg:gap-0 lg:justify-between relative lg:-translate-x-6 lg:-translate-y-20 w-full lg:w-[250px]">
-              <a href="https://github.com/BernardoPaiva412/nexus-ambiental"><img src="src/assets/icons/github.png"
-                  alt="github" class="h-10 lg:h-13"></a>
-              <a href="https://www.instagram.com/"><img src="src/assets/icons/instagram.png" alt="instagram"
-                  class="h-10 lg:h-13"></a>
-              <a href="https://web.whatsapp.com/"><img src="src/assets/icons/whatsapp.png" alt="whatsapp"
-                  class="h-10 lg:h-13"></a>
+          <!-- Carousel Container com gradientes de máscara -->
+          <div
+            class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]">
+
+            <!-- Inner Track que agora se move via CSS. Ele se duplica para criar o loop visual. -->
+            <div class="flex animate-scroll-subtle items-center gap-12 sm:gap-16">
+
+              <!-- Logos originais (8 parceiros) -->
+              <img src="src/assets/partners/ong-agua1.png" alt="Iniciativa Maré de Vidro" class="logo-parceiro">
+              <img src="src/assets/partners/ong-agua2.png" alt="Projeto Veias da Terra" class="logo-parceiro">
+              <img src="src/assets/partners/ong-agua3.png" alt="Instituto Água-Espelho" class="logo-parceiro">
+              <img src="src/assets/partners/ong-terra1.png" alt="Rede Micélio Vivo" class="logo-parceiro">
+              <img src="src/assets/partners/ong-terra2.png" alt="Sentinelas da Terra Firme" class="logo-parceiro">
+              <img src="src/assets/partners/ong-terra3.png" alt="Projeto Ciclo de Gaia" class="logo-parceiro">
+              <img src="src/assets/partners/ong-ar2.png" alt="Aliança Fôlego Verde" class="logo-parceiro">
+              <img src="src/assets/partners/ong-ar3.png" alt="Fundação Horizonte Azul" class="logo-parceiro">
+
+              <!-- Cópias clonadas (essenciais para o efeito de loop contínuo) -->
+              <img src="src/assets/partners/ong-agua1.png" alt="Iniciativa Maré de Vidro" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-agua2.png" alt="Projeto Veias da Terra" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-agua3.png" alt="Instituto Água-Espelho" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-terra1.png" alt="Rede Micélio Vivo" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-terra2.png" alt="Sentinelas da Terra Firme" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-terra3.png" alt="Projeto Ciclo de Gaia" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-ar2.png" alt="Aliança Fôlego Verde" class="logo-parceiro"
+                aria-hidden="true">
+              <img src="src/assets/partners/ong-ar3.png" alt="Fundação Horizonte Azul" class="logo-parceiro"
+                aria-hidden="true">
+
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div
-        class="relative lg:absolute bottom-0 z-2 w-full text-center text-[#757571] mt-10 lg:mt-0 pb-4 lg:pb-0 text-sm">
-        2025 © NEXUS AMBIENTAL. Todos direitos reservados.
+
+    <!-- FOOTER MODERNIZADO -->
+    <footer class="bg-[#4f4e4e] text-[#d6dade]">
+      <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+
+        <!-- Container principal com Flexbox para as colunas -->
+        <div class="flex flex-col gap-12 lg:flex-row lg:justify-between">
+
+          <!-- Coluna da Esquerda: Branding e Contato -->
+          <div class="max-w-md">
+            <h2 class="font-anta text-2xl font-bold tracking-widest text-white">NEXUS ambiental</h2>
+            <p class="mt-4 leading-relaxed text-base font-light text-gray-300">
+              Explorando as conexões invisíveis da poluição para inspirar um futuro mais limpo e sustentável para todos.
+            </p>
+            <div class="mt-8">
+              <div class="text-sm font-semibold uppercase text-gray-400">Entre em Contato</div>
+              <a href="mailto:nexusambiental@gmail.com"
+                class="mt-1 block text-lg text-white hover:text-[#cdf187] transition-colors">
+                nexusambiental@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna da Direita: Navegação e Redes Sociais -->
+          <div class="flex flex-col gap-8 sm:flex-row sm:gap-16">
+            <!-- Sub-coluna de Navegação -->
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Navegação</h3>
+              <ul class="mt-4 space-y-2">
+                <li><a href="#inicio" class="text-base font-light hover:text-white transition-colors">Início</a></li>
+                <li><a href="#origem" class="text-base font-light hover:text-white transition-colors">Origem</a></li>
+                <li><a href="#crise" class="text-base font-light hover:text-white transition-colors">Crise</a></li>
+                <li><a href="#chamado" class="text-base font-light hover:text-white transition-colors">Chamado</a></li>
+                <li><a href="#nexus" class="text-base font-light hover:text-white transition-colors">Nexus</a></li>
+              </ul>
+            </div>
+
+            <!-- Sub-coluna de Redes Sociais -->
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Nos siga</h3>
+              <ul class="mt-4 space-y-2">
+                <!-- GitHub -->
+                <li>
+                  <a href="https://github.com/BernardoPaiva412/nexus-ambiental" target="_blank"
+                    rel="noopener noreferrer" class="flex items-center gap-3 hover:text-white transition-colors">
+                    <!-- Ícone SVG do GitHub -->
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <!-- Instagram -->
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-3 hover:text-white transition-colors">
+                    <!-- Ícone SVG do Instagram -->
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.288.196-6.136 2.043-6.331 6.331C.014 8.333 0 8.741 0 12c0 3.259.014 3.667.072 4.947.196 4.288 2.043 6.135 6.331 6.331C8.333 23.986 8.741 24 12 24c3.259 0 3.667-.014 4.947-.072 4.288-.196 6.135-2.043 6.331-6.331.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.196-4.288-2.043-6.135-6.331-6.331C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <!-- Whatsapp -->
+                <li>
+                  <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-3 hover:text-white transition-colors">
+                    <!-- Ícone SVG do Whatsapp -->
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12.04 20.12c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.23.86 5.82 2.45s2.45 3.62 2.45 5.82c-.01 4.54-3.71 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.96-.15.17-.3.19-.56.06-.26-.12-1.09-.4-2.08-1.28-.76-.69-1.28-1.55-1.43-1.8s-.02-.23.1-.35c.11-.11.25-.28.37-.42.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.4-.42-.56-.42h-.5c-.17 0-.43.06-.66.31-.23.25-.87.85-1.07 2.07s-1.1 2.41-.03 2.41c1.07 0 2.18-.59 2.49-.92.31-.33.6-.7.83-1.04.23-.34.46-.56.76-.7.3-.14.63-.07.86.06.23.13.64.3 1.02.6.38.3.61.46.69.58.08.12.08.31-.01.43-.09.12-.34.39-.58.51z" />
+                    </svg>
+                    <span>Whatsapp</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seção de Copyright na parte inferior -->
+        <div class="mt-12 border-t border-gray-600 pt-8">
+          <p class="text-center text-xs leading-5 text-gray-400">
+            &copy; <span id="copyright-year"></span> Nexus Ambiental. Todos os direitos reservados.
+          </p>
+        </div>
       </div>
+
+      <script>
+        // Pequeno script para atualizar o ano do copyright dinamicamente
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+      </script>
     </footer>
   </div>
   </div>

@@ -40,14 +40,14 @@ btnOcean.addEventListener('click', () => {
     pollutionText2.textContent = "As consequências da poluição da água são severas e afetam diretamente a saúde humana e os ecossistemas: •Saúde Humana: Proliferação de doenças de veiculação hídrica, como hepatite, cólera e leptospirose, além da perda de acesso à água potável. •Meio Ambiente: Diminuição da biodiversidade aquática, contaminação de lençóis freáticos e outros mananciais, e acentuação do processo de eutrofização dos corpos hídricos, que leva à morte de ecossistemas aquáticos."
     consequenceGraphic.src = "src/assets/graphics/graphic1.jpg" //muda o gráfico
     consequenceImage.src = "src/assets/consequences/pelican.jpg" //muda a imagem
-    
+
     //texto azul: #141cff
     //acentos azuis: #0700e0
 
     // VERIFICA SE ESTAVA NA TERRA (GREEN)
     if (sectionPeso.classList.contains(bgLandClass) === true) {
         sectionPeso.classList.replace(bgLandClass, bgWaterClass) // Troca imagem
-        
+
         colorLines.forEach(line => {
             line.classList.replace("border-[#14ca66]", "border-[#0700e0]")
         })
@@ -58,7 +58,7 @@ btnOcean.addEventListener('click', () => {
             divider.classList.replace("border-[#00F968]", "border-[#141CFF]")
         })
     }
-    
+
     // VERIFICA SE ESTAVA NO AR (SKY)
     if (sectionPeso.classList.contains(bgAirClass) === true) {
         sectionPeso.classList.replace(bgAirClass, bgWaterClass) // Troca imagem
@@ -93,7 +93,7 @@ btnLand.addEventListener('click', () => {
     pollutionText2.textContent = "Causa a contaminação da cadeia alimentar, podendo levar a disfunções hepáticas, renais, problemas no sistema nervoso e até mesmo câncer; provoca a perda de fertilidade do solo, a contaminação de lençóis freáticos e a redução da biodiversidade; Prejudica a agricultura, inviabiliza projetos de construção e desvaloriza terrenos, além de poder danificar infraestruturas."
     consequenceGraphic.src = "src/assets/graphics/graphic2.png" //muda o gráfico
     consequenceImage.src = "src/assets/consequences/poverty.jpg" //muda a imagem
-    
+
     //texto verde: #00f968
     //acentos verdes: #14ca66
 
@@ -101,7 +101,7 @@ btnLand.addEventListener('click', () => {
     if (sectionPeso.classList.contains(bgWaterClass) === true || (!sectionPeso.classList.contains(bgLandClass) && !sectionPeso.classList.contains(bgAirClass))) {
         // O "ou" extra garante que funcione caso seja o carregamento inicial onde a classe exata pode não estar mapeada no JS ainda
         sectionPeso.classList.replace(bgWaterClass, bgLandClass) // Troca imagem
-        
+
         colorLines.forEach(line => {
             line.classList.replace("border-[#0700e0]", "border-[#14ca66]")
         })
@@ -112,7 +112,7 @@ btnLand.addEventListener('click', () => {
             divider.classList.replace("border-[#141CFF]", "border-[#00F968]")
         })
     }
-    
+
     // VERIFICA SE ESTAVA NO AR (SKY)
     if (sectionPeso.classList.contains(bgAirClass) === true) {
         sectionPeso.classList.replace(bgAirClass, bgLandClass) // Troca imagem
@@ -147,14 +147,14 @@ btnAir.addEventListener('click', () => {
     pollutionText2.textContent = "As consequências da poluição do ar são abrangentes e afetam a saúde humana, o meio ambiente e o clima global: Saúde Humana: Causa problemas respiratórios (asma, bronquite), irritações nos olhos, nariz e garganta, e agrava doenças preexistentes. Meio Ambiente: Provoca chuva ácida, que danifica solos, vegetação e corpos d'água. Intensifica o fenômeno da inversão térmica e afeta a biodiversidade. Clima Global: Contribui para o aquecimento global, intensificando o efeito estufa e acelerando as mudanças climáticas."
     consequenceGraphic.src = "src/assets/graphics/graphic3.png" //muda o gráfico
     consequenceImage.src = "src/assets/consequences/global-warming.jpg" //muda a imagem
-    
+
     //texto amarelo: #fedb4f
     //acentos amarelos: #E09304
 
     // VERIFICA SE ESTAVA NA ÁGUA (OCEAN)
     if (sectionPeso.classList.contains(bgWaterClass) === true || (!sectionPeso.classList.contains(bgLandClass) && !sectionPeso.classList.contains(bgAirClass))) {
         sectionPeso.classList.replace(bgWaterClass, bgAirClass) // Troca imagem
-        
+
         colorLines.forEach(line => {
             line.classList.replace("border-[#0700e0]", "border-[#E0AE04]")
         });
@@ -188,18 +188,65 @@ window.addEventListener("scroll", function () {
     // 0.0 = fundo fixo (igual bg-fixed)
     // 0.5 = move metade da velocidade (efeito de profundidade)
     // 1.0 = move junto com a página (normal)
-    const speed = 0.5; 
-    
+    const speed = 0.5;
+
     // Pega a posição atual do scroll
     const scrollPosition = window.scrollY;
-    
+
     // Calcula o deslocamento baseando-se em quando a seção começa
     // Isso evita que a imagem comece "cortada"
     const sectionOffset = sectionPeso.offsetTop;
-    
+
     // O cálculo mágico: move o background positivamente (para baixo) enquanto a tela sobe
     const yPos = (scrollPosition - sectionOffset) * speed;
-    
+
     // Aplica a posição no CSS inline (mantendo o centro horizontal)
     sectionPeso.style.backgroundPosition = `center ${yPos}px`;
+});
+
+// Script para o Carrossel da Seção Origem
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('#slider-track');
+    // Converte a coleção de filhos do track (as imagens) em um array
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('#next-button');
+    const prevButton = document.querySelector('#prev-button');
+
+    // Pega a largura de um slide (todas são iguais)
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Variável para guardar a posição atual do carrossel
+    let currentIndex = 0;
+
+    // Função principal que move o trilho para o slide desejado
+    const moveToSlide = (targetIndex) => {
+        // Usa transform para mover o 'track' horizontalmente
+        track.style.transform = `translateX(-${100 * targetIndex}%)`;
+        currentIndex = targetIndex;
+    };
+
+    // Event listener para o botão "Próximo"
+    nextButton.addEventListener('click', () => {
+        let nextIndex = currentIndex + 1;
+        // Se chegar ao final, volta para o primeiro slide (loop)
+        if (nextIndex >= slides.length) {
+            nextIndex = 0;
+        }
+        moveToSlide(nextIndex);
+    });
+
+    // Event listener para o botão "Anterior"
+    prevButton.addEventListener('click', () => {
+        let prevIndex = currentIndex - 1;
+        // Se estiver no início, vai para o último slide (loop)
+        if (prevIndex < 0) {
+            prevIndex = slides.length - 1;
+        }
+        moveToSlide(prevIndex);
+    });
+
+    // Garante que o carrossel se ajuste se o tamanho da janela mudar
+    window.addEventListener('resize', () => {
+        moveToSlide(currentIndex);
+    });
 });

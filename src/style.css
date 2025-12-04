@@ -71,7 +71,7 @@
     66.666% {
         background-image: linear-gradient(to top, #454533, rgba(69, 69, 51, 0));
     }
-    
+
     100% {
         background-image: linear-gradient(to top, #354635, rgba(53, 70, 53, 0));
     }
@@ -81,7 +81,7 @@
     0% {
         background-color: #354635;
     }
-    
+
     33.333% {
         background-color: #333345;
     }
@@ -99,7 +99,7 @@
     0% {
         color: #14ca66;
     }
-    
+
     33.333% {
         color: #14a1ff;
     }
@@ -117,7 +117,7 @@
     0% {
         color: #354635;
     }
-    
+
     33.333% {
         color: #333345;
     }
@@ -168,9 +168,52 @@
 .img1 {
     animation: img1Trans 21s infinite normal ease-in-out;
 }
+
 .img2 {
     animation: img2Trans 21s infinite normal ease-in-out;
 }
+
 .img3 {
     animation: img3Trans 21s infinite normal ease-in-out;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* Classe customizada para os logos, com lógica mobile-first */
+    .logo-parceiro {
+        @apply h-20 max-w-none flex-shrink-0;
+        /* Estilos base para mobile: altura e flex */
+        @apply transition-all duration-300 hover:scale-105;
+        /* Efeito de hover básico para mobile */
+        @apply sm:h-24 lg:h-28;
+        /* Tamanhos maiores para telas maiores */
+        @apply sm:grayscale sm:opacity-70;
+        /* Efeitos de grayscale e opacidade SÓ para telas 'sm' ou maiores */
+        @apply sm:hover:grayscale-0 sm:hover:opacity-100 sm:hover:scale-110;
+        /* Efeitos de hover SÓ para telas 'sm' ou maiores */
+    }
+}
+
+@layer utilities {
+
+    /* A animação permanece a mesma */
+    @keyframes scroll-subtle {
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-scroll-subtle {
+        display: flex;
+        width: max-content;
+        animation: scroll-subtle 45s linear infinite;
+    }
+
+    .animate-scroll-subtle:hover {
+        animation-play-state: paused;
+    }
 }
